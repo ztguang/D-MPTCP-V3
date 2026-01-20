@@ -1,0 +1,856 @@
+[    0.000000] Linux version 5.4.243-tcp (root@ztg) (gcc version 12.2.0 (Debian 12.2.0-14)) #1 SMP Fri Apr 12 08:27:09 CST 2024
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.4.243-tcp root=UUID=98415a12-53b7-4144-8265-0f7ece09e445 ro quiet splash
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Hygon HygonGenuine
+[    0.000000]   Centaur CentaurHauls
+[    0.000000]   zhaoxin   Shanghai  
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007ffeffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007fff0000-0x000000007fffffff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.5 present.
+[    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000001] kvm-clock: cpu 0, msr 22a01001, primary cpu clock
+[    0.000001] kvm-clock: using sched offset of 4428499506 cycles
+[    0.000003] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000006] tsc: Detected 2100.000 MHz processor
+[    0.001855] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.001856] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.001860] last_pfn = 0x7fff0 max_arch_pfn = 0x400000000
+[    0.001929] MTRR default type: uncachable
+[    0.001930] MTRR fixed ranges enabled:
+[    0.001931]   00000-9FFFF write-back
+[    0.001932]   A0000-BFFFF uncachable
+[    0.001933]   C0000-FFFFF write-protect
+[    0.001933] MTRR variable ranges enabled:
+[    0.001935]   0 base 000000000000 mask 3FFF80000000 write-back
+[    0.001935]   1 disabled
+[    0.001936]   2 disabled
+[    0.001936]   3 disabled
+[    0.001937]   4 disabled
+[    0.001937]   5 disabled
+[    0.001938]   6 disabled
+[    0.001938]   7 disabled
+[    0.001938]   8 disabled
+[    0.001939]   9 disabled
+[    0.001939]   10 disabled
+[    0.001940]   11 disabled
+[    0.001940]   12 disabled
+[    0.001940]   13 disabled
+[    0.001941]   14 disabled
+[    0.001941]   15 disabled
+[    0.001958] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.002092] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+[    0.091298] check: Scanning 1 areas for low memory corruption
+[    0.091484] RAMDISK: [mem 0x32275000-0x35131fff]
+[    0.091492] ACPI: Early table checksum verification disabled
+[    0.091498] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+[    0.091502] ACPI: XSDT 0x000000007FFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+[    0.091508] ACPI: FACP 0x000000007FFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+[    0.091515] ACPI: DSDT 0x000000007FFF02E0 002353 (v02 VBOX   VBOXBIOS 00000002 VBOX 00029BF3)
+[    0.091519] ACPI: FACS 0x000000007FFF0200 000040
+[    0.091522] ACPI: FACS 0x000000007FFF0200 000040
+[    0.091525] ACPI: APIC 0x000000007FFF0240 000054 (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+[    0.091529] ACPI: SSDT 0x000000007FFF02A0 000038 (v01 VBOX   VBOXCPUT 00000002 VBOX 00029BF3)
+[    0.091532] ACPI: Reserving FACP table memory at [mem 0x7fff00f0-0x7fff01e3]
+[    0.091533] ACPI: Reserving DSDT table memory at [mem 0x7fff02e0-0x7fff2632]
+[    0.091533] ACPI: Reserving FACS table memory at [mem 0x7fff0200-0x7fff023f]
+[    0.091534] ACPI: Reserving FACS table memory at [mem 0x7fff0200-0x7fff023f]
+[    0.091535] ACPI: Reserving APIC table memory at [mem 0x7fff0240-0x7fff0293]
+[    0.091535] ACPI: Reserving SSDT table memory at [mem 0x7fff02a0-0x7fff02d7]
+[    0.091549] ACPI: Local APIC address 0xfee00000
+[    0.091742] No NUMA configuration found
+[    0.091743] Faking a node at [mem 0x0000000000000000-0x000000007ffeffff]
+[    0.091753] NODE_DATA(0) allocated [mem 0x7ffc5000-0x7ffeffff]
+[    0.092036] Zone ranges:
+[    0.092037]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.092039]   DMA32    [mem 0x0000000001000000-0x000000007ffeffff]
+[    0.092039]   Normal   empty
+[    0.092040]   Device   empty
+[    0.092041] Movable zone start for each node
+[    0.092043] Early memory node ranges
+[    0.092044]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.092044]   node   0: [mem 0x0000000000100000-0x000000007ffeffff]
+[    0.092047] Zeroed struct page in unavailable ranges: 114 pages
+[    0.092048] Initmem setup node 0 [mem 0x0000000000001000-0x000000007ffeffff]
+[    0.092049] On node 0 totalpages: 524174
+[    0.092051]   DMA zone: 64 pages used for memmap
+[    0.092052]   DMA zone: 21 pages reserved
+[    0.092052]   DMA zone: 3998 pages, LIFO batch:0
+[    0.092126]   DMA32 zone: 8128 pages used for memmap
+[    0.092126]   DMA32 zone: 520176 pages, LIFO batch:63
+[    0.101256] ACPI: PM-Timer IO Port: 0x4008
+[    0.101260] ACPI: Local APIC address 0xfee00000
+[    0.101329] IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+[    0.101333] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.101335] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+[    0.101336] ACPI: IRQ0 used by override.
+[    0.101338] ACPI: IRQ9 used by override.
+[    0.101340] Using ACPI (MADT) for SMP configuration information
+[    0.101346] smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+[    0.101371] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.101372] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.101373] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.101373] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.101375] [mem 0x80000000-0xfebfffff] available for PCI devices
+[    0.101376] Booting paravirtualized kernel on KVM
+[    0.101379] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.101384] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:1 nr_cpu_ids:1 nr_node_ids:1
+[    0.102374] percpu: Embedded 60 pages/cpu s208896 r8192 d28672 u2097152
+[    0.102378] pcpu-alloc: s208896 r8192 d28672 u2097152 alloc=1*2097152
+[    0.102379] pcpu-alloc: [0] 0 
+[    0.102406] Built 1 zonelists, mobility grouping on.  Total pages: 515961
+[    0.102407] Policy zone: DMA32
+[    0.102408] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.4.243-tcp root=UUID=98415a12-53b7-4144-8265-0f7ece09e445 ro quiet splash
+[    0.103265] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.103529] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.103581] mem auto-init: stack:off, heap alloc:on, heap free:off
+[    0.103584] Calgary: detecting Calgary via BIOS EBDA area
+[    0.103585] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+[    0.107924] Memory: 1967340K/2096696K available (14339K kernel code, 2392K rwdata, 4692K rodata, 2720K init, 17272K bss, 129356K reserved, 0K cma-reserved)
+[    0.108867] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.108885] ftrace: allocating 42894 entries in 168 pages
+[    0.126807] rcu: Hierarchical RCU implementation.
+[    0.126809] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=1.
+[    0.126810] 	Tasks RCU enabled.
+[    0.126811] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.126812] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.129808] NR_IRQS: 524544, nr_irqs: 256, preallocated irqs: 16
+[    0.130025] random: crng init done
+[    0.139339] Console: colour VGA+ 80x25
+[    0.139343] printk: console [tty0] enabled
+[    0.139364] ACPI: Core revision 20190816
+[    0.139464] APIC: Switch to symmetric I/O mode setup
+[    0.139722] x2apic enabled
+[    0.139964] Switched APIC routing to physical x2apic.
+[    0.141113] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.141139] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x1e4530a99b6, max_idle_ns: 440795257976 ns
+[    0.141145] Calibrating delay loop (skipped) preset value.. 4200.00 BogoMIPS (lpj=8400000)
+[    0.141147] pid_max: default: 32768 minimum: 301
+[    0.141176] LSM: Security Framework initializing
+[    0.141185] Yama: becoming mindful.
+[    0.141211] AppArmor: AppArmor initialized
+[    0.141244] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.141248] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.141259] *** VALIDATE tmpfs ***
+[    0.141389] *** VALIDATE proc ***
+[    0.141430] *** VALIDATE cgroup1 ***
+[    0.141431] *** VALIDATE cgroup2 ***
+[    0.141573] process: using mwait in idle threads
+[    0.141578] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+[    0.141579] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+[    0.141599] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.141605] Spectre V2 : Mitigation: Retpolines
+[    0.141605] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.141606] Spectre V2 : Spectre v2 / SpectreRSB : Filling RSB on VMEXIT
+[    0.141606] RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+[    0.141959] RETBleed: Vulnerable
+[    0.141960] Speculative Store Bypass: Vulnerable
+[    0.141965] TAA: Mitigation: TSX disabled
+[    0.141966] MMIO Stale Data: Mitigation: Clear CPU buffers
+[    0.146227] Freeing SMP alternatives memory: 40K
+[    0.258622] smpboot: CPU0: Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz (family: 0x6, model: 0x55, stepping: 0x7)
+[    0.258782] Performance Events: unsupported p6 CPU model 85 no PMU driver, software events only.
+[    0.258821] rcu: Hierarchical SRCU implementation.
+[    0.259320] NMI watchdog: Perf NMI watchdog permanently disabled
+[    0.259359] smp: Bringing up secondary CPUs ...
+[    0.259360] smp: Brought up 1 node, 1 CPU
+[    0.259361] smpboot: Max logical packages: 1
+[    0.259363] smpboot: Total of 1 processors activated (4200.00 BogoMIPS)
+[    0.260396] devtmpfs: initialized
+[    0.260445] x86/mm: Memory block size: 128MB
+[    0.260831] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.260838] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.260884] pinctrl core: initialized pinctrl subsystem
+[    0.260998] PM: RTC time: 11:53:25, date: 2026-01-20
+[    0.261122] NET: Registered protocol family 16
+[    0.261141] audit: initializing netlink subsys (disabled)
+[    0.261141] EISA bus registered
+[    0.261141] cpuidle: using governor ladder
+[    0.261141] cpuidle: using governor menu
+[    0.261141] ACPI: bus type PCI registered
+[    0.261141] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.261141] PCI: Using configuration type 1 for base access
+[    0.261674] audit: type=2000 audit(1768881212.135:1): state=initialized audit_enabled=0 res=1
+[    0.261770] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.262652] ACPI: Added _OSI(Module Device)
+[    0.262653] ACPI: Added _OSI(Processor Device)
+[    0.262653] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.262654] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.262655] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.262656] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.262657] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    0.264673] ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    0.266332] ACPI: Interpreter enabled
+[    0.266343] ACPI: (supports S0 S5)
+[    0.266345] ACPI: Using IOAPIC for interrupt routing
+[    0.266558] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.266669] ACPI: Enabled 2 GPEs in block 00 to 07
+[    0.271727] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.271732] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+[    0.272186] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    0.272194] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.272569] PCI host bridge to bus 0000:00
+[    0.272571] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.272573] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.272574] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.272576] pci_bus 0000:00: root bus resource [mem 0x80000000-0xfdffffff window]
+[    0.272578] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.272633] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+[    0.273677] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+[    0.274469] pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+[    0.274838] pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+[    0.274997] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.274999] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.274999] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.275000] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.275565] pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000
+[    0.277218] pci 0000:00:02.0: reg 0x10: [io  0xd010-0xd01f]
+[    0.281186] pci 0000:00:02.0: reg 0x14: [mem 0xe0000000-0xe7ffffff pref]
+[    0.283775] pci 0000:00:02.0: reg 0x18: [mem 0xf0000000-0xf01fffff]
+[    0.293929] pci 0000:00:03.0: [1022:2000] type 00 class 0x020000
+[    0.294604] pci 0000:00:03.0: reg 0x10: [io  0xd020-0xd03f]
+[    0.295222] pci 0000:00:03.0: reg 0x14: [mem 0xf0200000-0xf0200fff]
+[    0.300194] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+[    0.300876] pci 0000:00:04.0: reg 0x10: [io  0xd040-0xd05f]
+[    0.301252] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+[    0.301857] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+[    0.305183] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+[    0.305717] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+[    0.305729] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+[    0.306336] pci 0000:00:08.0: [8086:100e] type 00 class 0x020000
+[    0.307040] pci 0000:00:08.0: reg 0x10: [mem 0xf0820000-0xf083ffff]
+[    0.308198] pci 0000:00:08.0: reg 0x18: [io  0xd060-0xd067]
+[    0.311303] pci 0000:00:09.0: [8086:100e] type 00 class 0x020000
+[    0.312019] pci 0000:00:09.0: reg 0x10: [mem 0xf0840000-0xf085ffff]
+[    0.313252] pci 0000:00:09.0: reg 0x18: [io  0xd068-0xd06f]
+[    0.322230] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+[    0.322516] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+[    0.322620] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+[    0.322726] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+[    0.325397] iommu: Default domain type: Translated 
+[    0.325460] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.325462] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.325464] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.325465] vgaarb: loaded
+[    0.325675] SCSI subsystem initialized
+[    0.325708] libata version 3.00 loaded.
+[    0.325732] ACPI: bus type USB registered
+[    0.325746] usbcore: registered new interface driver usbfs
+[    0.325752] usbcore: registered new interface driver hub
+[    0.325756] usbcore: registered new device driver usb
+[    0.325785] pps_core: LinuxPPS API ver. 1 registered
+[    0.325785] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.325787] PTP clock support registered
+[    0.325823] EDAC MC: Ver: 3.0.0
+[    0.326112] PCI: Using ACPI for IRQ routing
+[    0.326113] PCI: pci_cache_line_size set to 64 bytes
+[    0.326281] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+[    0.326284] e820: reserve RAM buffer [mem 0x7fff0000-0x7fffffff]
+[    0.326407] NetLabel: Initializing
+[    0.326408] NetLabel:  domain hash size = 128
+[    0.326408] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.326427] NetLabel:  unlabeled traffic allowed by default
+[    0.328022] clocksource: Switched to clocksource kvm-clock
+[    0.339615] *** VALIDATE bpf ***
+[    0.339678] VFS: Disk quotas dquot_6.6.0
+[    0.339690] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.339712] *** VALIDATE ramfs ***
+[    0.339715] *** VALIDATE hugetlbfs ***
+[    0.339796] AppArmor: AppArmor Filesystem Enabled
+[    0.339824] pnp: PnP ACPI init
+[    0.339896] pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+[    0.339962] pnp 00:01: Plug and Play ACPI device, IDs PNP0f03 (active)
+[    0.340706] pnp: PnP ACPI: found 2 devices
+[    0.341696] thermal_sys: Registered thermal governor 'fair_share'
+[    0.341696] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.341697] thermal_sys: Registered thermal governor 'step_wise'
+[    0.341698] thermal_sys: Registered thermal governor 'user_space'
+[    0.341698] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.346213] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.346255] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.346256] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.346257] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.346259] pci_bus 0000:00: resource 7 [mem 0x80000000-0xfdffffff window]
+[    0.346315] NET: Registered protocol family 2
+[    0.346393] IP idents hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.346769] tcp_listen_portaddr_hash hash table entries: 1024 (order: 2, 16384 bytes, linear)
+[    0.346850] TCP established hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.346917] TCP bind hash table entries: 16384 (order: 6, 262144 bytes, linear)
+[    0.346942] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.346986] UDP hash table entries: 1024 (order: 3, 32768 bytes, linear)
+[    0.346998] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes, linear)
+[    0.347025] NET: Registered protocol family 1
+[    0.347033] NET: Registered protocol family 44
+[    0.347059] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.347071] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    0.347129] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.347212] PCI: CLS 0 bytes, default 64
+[    0.347266] Trying to unpack rootfs image as initramfs...
+[    0.515175] Freeing initrd memory: 47860K
+[    0.515175] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x1e4530a99b6, max_idle_ns: 440795257976 ns
+[    0.515175] clocksource: Switched to clocksource tsc
+[    0.515175] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[    0.515175] check: Scanning for low memory corruption every 60 seconds
+[    0.515175] Initialise system trusted keyrings
+[    0.515175] Key type blacklist registered
+[    0.515175] workingset: timestamp_bits=36 max_order=19 bucket_order=0
+[    0.515175] zbud: loaded
+[    0.515175] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.515175] fuse: init (API version 7.31)
+[    0.515175] *** VALIDATE fuse ***
+[    0.515175] *** VALIDATE fuse ***
+[    0.515175] Platform Keyring initialized
+[    0.531291] Key type asymmetric registered
+[    0.531292] Asymmetric key parser 'x509' registered
+[    0.531301] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+[    0.531339] io scheduler mq-deadline registered
+[    0.531447] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    0.531685] ACPI: AC Adapter [AC] (on-line)
+[    0.531729] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    0.531759] ACPI: Power Button [PWRF]
+[    0.531845] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    0.531858] ACPI: Sleep Button [SLPF]
+[    0.532071] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    0.533231] Linux agpgart interface v0.103
+[    0.627197] loop: module loaded
+[    0.627393] ata_piix 0000:00:01.1: version 2.13
+[    0.627919] scsi host0: ata_piix
+[    0.628039] scsi host1: ata_piix
+[    0.628075] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+[    0.628077] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+[    0.628179] tun: Universal TUN/TAP device driver, 1.6
+[    0.628556] PPP generic driver version 2.4.2
+[    0.628613] VFIO - User Level meta-driver version: 0.3
+[    0.628918] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.628925] ehci-pci: EHCI PCI platform driver
+[    0.628943] ehci-platform: EHCI generic platform driver
+[    0.628951] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.628953] ohci-pci: OHCI PCI platform driver
+[    0.628960] ohci-platform: OHCI generic platform driver
+[    0.628965] uhci_hcd: USB Universal Host Controller Interface driver
+[    0.629039] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[    0.629595] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    0.629600] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    0.629716] mousedev: PS/2 mouse device common for all mice
+[    0.630041] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[    0.630542] rtc_cmos rtc_cmos: registered as rtc0
+[    0.630559] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+[    0.630566] i2c /dev entries driver
+[    0.630624] device-mapper: uevent: version 1.0.3
+[    0.630679] device-mapper: ioctl: 4.41.0-ioctl (2019-09-16) initialised: dm-devel@redhat.com
+[    0.630700] platform eisa.0: Probing EISA bus 0
+[    0.630702] platform eisa.0: EISA: Cannot allocate resource for mainboard
+[    0.630704] platform eisa.0: Cannot allocate resource for EISA slot 1
+[    0.630705] platform eisa.0: Cannot allocate resource for EISA slot 2
+[    0.630706] platform eisa.0: Cannot allocate resource for EISA slot 3
+[    0.630708] platform eisa.0: Cannot allocate resource for EISA slot 4
+[    0.630709] platform eisa.0: Cannot allocate resource for EISA slot 5
+[    0.630710] platform eisa.0: Cannot allocate resource for EISA slot 6
+[    0.630711] platform eisa.0: Cannot allocate resource for EISA slot 7
+[    0.630713] platform eisa.0: Cannot allocate resource for EISA slot 8
+[    0.630714] platform eisa.0: EISA: Detected 0 cards
+[    0.630717] intel_pstate: CPU model not supported
+[    0.630729] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.630790] drop_monitor: Initializing network drop monitor service
+[    0.631002] NET: Registered protocol family 10
+[    0.635231] Segment Routing with IPv6
+[    0.635231] NET: Registered protocol family 17
+[    0.635231] Key type dns_resolver registered
+[    0.635231] RAS: Correctable Errors collector initialized.
+[    0.635231] IPI shorthand broadcast: enabled
+[    0.635231] sched_clock: Marking stable (620105080, 11126231)->(633501883, -2270572)
+[    0.637997] registered taskstats version 1
+[    0.638010] Loading compiled-in X.509 certificates
+[    0.638797] Loaded X.509 cert 'Build time autogenerated kernel key: 0a9e52cc6eb58eed9b63e328679db6d5d5216245'
+[    0.638819] zswap: loaded using pool lzo/zbud
+[    0.638888] Key type ._fscrypt registered
+[    0.638888] Key type .fscrypt registered
+[    0.645082] Key type big_key registered
+[    0.648718] Key type encrypted registered
+[    0.648721] AppArmor: AppArmor sha1 policy hashing enabled
+[    0.648731] ima: No TPM chip found, activating TPM-bypass!
+[    0.648739] ima: Allocated hash algorithm: sha1
+[    0.648746] ima: No architecture policies found
+[    0.648757] evm: Initialising EVM extended attributes:
+[    0.648758] evm: security.selinux
+[    0.648758] evm: security.SMACK64
+[    0.648759] evm: security.SMACK64EXEC
+[    0.648760] evm: security.SMACK64TRANSMUTE
+[    0.648761] evm: security.SMACK64MMAP
+[    0.648761] evm: security.apparmor
+[    0.648762] evm: security.ima
+[    0.648762] evm: security.capability
+[    0.648763] evm: HMAC attrs: 0x1
+[    0.649152] PM:   Magic number: 10:975:883
+[    0.649285] rtc_cmos rtc_cmos: setting system clock to 2026-01-20T11:53:26 UTC (1768910006)
+[    0.798989] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+[    0.798991] ata1.00: 209715200 sectors, multi 128: LBA 
+[    0.799476] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+[    0.799671] sd 0:0:0:0: [sda] 209715200 512-byte logical blocks: (107 GB/100 GiB)
+[    0.799679] sd 0:0:0:0: [sda] Write Protect is off
+[    0.799681] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    0.799693] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    0.799830] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    0.800225]  sda: sda1 sda2
+[    0.811301] sd 0:0:0:0: [sda] Attached SCSI disk
+[    0.813180] Freeing unused decrypted memory: 2040K
+[    0.813891] Freeing unused kernel image memory: 2720K
+[    0.813893] Write protecting the kernel read-only data: 22528k
+[    0.814581] Freeing unused kernel image memory: 2036K
+[    0.814977] Freeing unused kernel image memory: 1452K
+[    0.829034] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    0.829038] Run /init as init process
+[    0.934535] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[    0.934609] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input4
+[    0.947609] pcnet32: pcnet32.c:v1.35 21.Apr.2008 tsbogend@alpha.franken.de
+[    0.948549] pcnet32: PCnet/FAST III 79C973 at 0xd020, 08:00:27:88:4e:37 assigned IRQ 19
+[    0.948594] pcnet32: Found PHY 0022:561b at address 0
+[    0.948901] pcnet32: eth0: registered as PCnet/FAST III 79C973
+[    0.950851] piix4_smbus 0000:00:07.0: SMBus Host Controller at 0x4100, revision 0
+[    0.951455] pcnet32: 1 cards_found
+[    0.955228] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    0.955229] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    1.019368] pcnet32 0000:00:03.0 enp0s3: renamed from eth0
+[    1.172184] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+[    1.360942] e1000 0000:00:08.0 eth0: (PCI:33MHz:32-bit) 08:00:27:74:3f:f0
+[    1.360946] e1000 0000:00:08.0 eth0: Intel(R) PRO/1000 Network Connection
+[    1.731452] e1000 0000:00:09.0 eth1: (PCI:33MHz:32-bit) 08:00:27:14:b9:69
+[    1.731455] e1000 0000:00:09.0 eth1: Intel(R) PRO/1000 Network Connection
+[    1.732625] e1000 0000:00:09.0 enp0s9: renamed from eth1
+[    1.734405] e1000 0000:00:08.0 enp0s8: renamed from eth0
+[    1.891578] EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: (null)
+[    1.973592] systemd[1]: Inserted module 'autofs4'
+[    1.983820] systemd[1]: systemd 245.4-4ubuntu3 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+[    1.983847] systemd[1]: Detected virtualization oracle.
+[    1.983850] systemd[1]: Detected architecture x86-64.
+[    1.985148] systemd[1]: Set hostname to <ztg>.
+[    2.107479] systemd[1]: /lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+[    2.160197] systemd[1]: Created slice system-modprobe.slice.
+[    2.160391] systemd[1]: Created slice User and Session Slice.
+[    2.160433] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    2.160595] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    2.160629] systemd[1]: Reached target User and Group Name Lookups.
+[    2.160638] systemd[1]: Reached target Remote File Systems.
+[    2.160647] systemd[1]: Reached target Slices.
+[    2.161197] systemd[1]: Listening on Syslog Socket.
+[    2.161265] systemd[1]: Listening on fsck to fsckd communication Socket.
+[    2.161303] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    2.161454] systemd[1]: Listening on Journal Audit Socket.
+[    2.161507] systemd[1]: Listening on Journal Socket (/dev/log).
+[    2.161576] systemd[1]: Listening on Journal Socket.
+[    2.161641] systemd[1]: Listening on udev Control Socket.
+[    2.161681] systemd[1]: Listening on udev Kernel Socket.
+[    2.162428] systemd[1]: Mounting Huge Pages File System...
+[    2.163410] systemd[1]: Mounting POSIX Message Queue File System...
+[    2.164308] systemd[1]: Mounting Kernel Debug File System...
+[    2.165172] systemd[1]: Mounting Kernel Trace File System...
+[    2.167108] systemd[1]: Starting Journal Service...
+[    2.189550] systemd[1]: Starting Set the console keyboard layout...
+[    2.197511] systemd[1]: Starting Create list of static device nodes for the current kernel...
+[    2.199477] systemd[1]: Starting Load Kernel Module drm...
+[    2.200440] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    2.200486] systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+[    2.212023] systemd[1]: Starting Load Kernel Modules...
+[    2.218918] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    2.229679] systemd[1]: Starting udev Coldplug all Devices...
+[    2.238322] systemd[1]: Starting Uncomplicated firewall...
+[    2.239899] systemd[1]: Mounted Huge Pages File System.
+[    2.239987] systemd[1]: Mounted POSIX Message Queue File System.
+[    2.240066] systemd[1]: Mounted Kernel Debug File System.
+[    2.240145] systemd[1]: Mounted Kernel Trace File System.
+[    2.251223] EXT4-fs (sda2): re-mounted. Opts: errors=remount-ro
+[    2.256167] systemd[1]: Finished Create list of static device nodes for the current kernel.
+[    2.257179] systemd[1]: modprobe@drm.service: Succeeded.
+[    2.260394] systemd[1]: Finished Load Kernel Module drm.
+[    2.260982] systemd[1]: Finished Remount Root and Kernel File Systems.
+[    2.277683] systemd[1]: Finished Uncomplicated firewall.
+[    2.279760] lp: driver loaded but no devices found
+[    2.296575] systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+[    2.296620] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+[    2.297315] systemd[1]: Starting Load/Save Random Seed...
+[    2.303826] systemd[1]: Starting Create System Users...
+[    2.308872] ppdev: user-space parallel port driver
+[    2.320067] systemd[1]: Finished Load/Save Random Seed.
+[    2.340179] systemd[1]: Finished Create System Users.
+[    2.340961] systemd[1]: Starting Create Static Device Nodes in /dev...
+[    2.360077] systemd[1]: Finished Create Static Device Nodes in /dev.
+[    2.360849] systemd[1]: Starting udev Kernel Device Manager...
+[    2.395833] systemd[1]: Finished udev Coldplug all Devices.
+[    2.398993] [drm] DMA map mode: Caching DMA mappings.
+[    2.399085] [drm] Capabilities:
+[    2.399085] [drm]   Rect copy.
+[    2.399086] [drm]   Cursor.
+[    2.399086] [drm]   Cursor bypass.
+[    2.399086] [drm]   Cursor bypass 2.
+[    2.399087] [drm]   Alpha cursor.
+[    2.399087] [drm]   Extended Fifo.
+[    2.399088] [drm]   Pitchlock.
+[    2.399088] [drm]   Irq mask.
+[    2.399088] [drm]   GMR.
+[    2.399089] [drm]   Traces.
+[    2.399089] [drm]   GMR2.
+[    2.399089] [drm]   Screen Object 2.
+[    2.399090] [drm]   Command Buffers.
+[    2.399090] [drm]   Command Buffers 2.
+[    2.399091] [drm]   Guest Backed Resources.
+[    2.399092] [drm] Max GMR ids is 8192
+[    2.399092] [drm] Max number of GMR pages is 1048576
+[    2.399093] [drm] Max dedicated hypervisor surface memory is 393216 kiB
+[    2.399093] [drm] Maximum display memory size is 131072 kiB
+[    2.399094] [drm] VRAM at 0xe0000000 size is 131072 kiB
+[    2.399094] [drm] MMIO at 0xf0000000 size is 2048 kiB
+[    2.400344] [TTM] Zone  kernel: Available graphics memory: 1011744 KiB
+[    2.400345] [TTM] Initializing pool allocator
+[    2.400375] [TTM] Initializing DMA pool allocator
+[    2.400405] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.400405] [drm] No driver support for vblank timestamp query.
+[    2.400625] [drm] Screen Target Display device initialized
+[    2.400856] [drm] width 720
+[    2.400868] [drm] height 400
+[    2.400871] [drm] bpp 32
+[    2.401405] [drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+[    2.402498] [drm] Using command buffers with DMA pool.
+[    2.402502] [drm] DX: no.
+[    2.402503] [drm] Atomic: yes.
+[    2.402503] [drm] SM4_1: no.
+[    2.402522] [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+[    2.426868] [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+[    2.436226] fbcon: svgadrmfb (fb0) is primary device
+[    2.438335] Console: switching to colour frame buffer device 100x37
+[    2.447548] [drm] Initialized vmwgfx 2.15.0 20180704 for 0000:00:02.0 on minor 0
+[    2.448865] systemd[1]: Finished Load Kernel Modules.
+[    2.449858] systemd[1]: Mounting FUSE Control File System...
+[    2.451046] systemd[1]: Mounting Kernel Configuration File System...
+[    2.459642] systemd[1]: Starting Apply Kernel Variables...
+[    2.470266] systemd[1]: Mounted FUSE Control File System.
+[    2.470334] systemd[1]: Condition check resulted in VMware vmblock fuse mount being skipped.
+[    2.489631] systemd[1]: Mounted Kernel Configuration File System.
+[    2.499461] systemd[1]: Finished Apply Kernel Variables.
+[    2.508099] systemd[1]: Finished Set the console keyboard layout.
+[    2.508189] systemd[1]: Reached target Local File Systems (Pre).
+[    2.513773] systemd[1]: Mounting Mount unit for bare, revision 5...
+[    2.534294] systemd[1]: Mounting Mount unit for core18, revision 1705...
+[    2.536676] systemd[1]: Mounting Mount unit for gnome-3-34-1804, revision 24...
+[    2.539009] systemd[1]: Mounting Mount unit for gtk-common-themes, revision 1506...
+[    2.544596] systemd[1]: Mounting Mount unit for gtk-common-themes, revision 1535...
+[    2.557833] systemd[1]: Mounting Mount unit for snap-store, revision 433...
+[    2.572158] systemd[1]: Mounting Mount unit for snapd, revision 7264...
+[    2.590094] systemd[1]: Started udev Kernel Device Manager.
+[    2.590246] systemd[1]: Mounted Mount unit for bare, revision 5.
+[    2.603848] systemd[1]: Starting Show Plymouth Boot Screen...
+[    2.604367] systemd[1]: Received SIGRTMIN+20 from PID 278 (plymouthd).
+[    2.626456] systemd[1]: Started Show Plymouth Boot Screen.
+[    2.626769] systemd[1]: Condition check resulted in Dispatch Password Requests to Console Directory Watch being skipped.
+[    2.626862] systemd[1]: Started Forward Password Requests to Plymouth Directory Watch.
+[    2.626943] systemd[1]: Reached target Local Encrypted Volumes.
+[    2.664195] systemd[1]: Mounted Mount unit for core18, revision 1705.
+[    2.664353] systemd[1]: Mounted Mount unit for gnome-3-34-1804, revision 24.
+[    2.664462] systemd[1]: Mounted Mount unit for gtk-common-themes, revision 1506.
+[    2.730122] systemd[1]: Mounted Mount unit for gtk-common-themes, revision 1535.
+[    2.763937] systemd[1]: Mounted Mount unit for snap-store, revision 433.
+[    2.764242] systemd[1]: Mounted Mount unit for snapd, revision 7264.
+[    2.764413] systemd[1]: Reached target Local File Systems.
+[    2.767147] systemd[1]: Starting Load AppArmor profiles...
+[    2.774680] systemd[1]: Starting Set console font and keymap...
+[    2.779178] systemd[1]: Starting Tell Plymouth To Write Out Runtime Data...
+[    2.783418] systemd[1]: Condition check resulted in Store a System Token in an EFI Variable being skipped.
+[    2.783465] systemd[1]: Condition check resulted in Commit a transient machine-id on disk being skipped.
+[    2.787646] systemd[1]: Finished Set console font and keymap.
+[    2.809534] systemd[1]: Received SIGRTMIN+20 from PID 278 (plymouthd).
+[    2.810166] systemd[1]: plymouth-read-write.service: Succeeded.
+[    2.810404] systemd[1]: Finished Tell Plymouth To Write Out Runtime Data.
+[    2.829424] audit: type=1400 audit(1768910008.676:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=299 comm="apparmor_parser"
+[    2.829441] audit: type=1400 audit(1768910008.676:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=299 comm="apparmor_parser"
+[    2.836093] audit: type=1400 audit(1768910008.684:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/tcpdump" pid=300 comm="apparmor_parser"
+[    2.877489] audit: type=1400 audit(1768910008.716:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince" pid=302 comm="apparmor_parser"
+[    2.877491] audit: type=1400 audit(1768910008.716:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince//sanitized_helper" pid=302 comm="apparmor_parser"
+[    2.877493] audit: type=1400 audit(1768910008.716:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-previewer" pid=302 comm="apparmor_parser"
+[    2.877494] audit: type=1400 audit(1768910008.716:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-previewer//sanitized_helper" pid=302 comm="apparmor_parser"
+[    2.877496] audit: type=1400 audit(1768910008.716:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-thumbnailer" pid=302 comm="apparmor_parser"
+[    2.892316] audit: type=1400 audit(1768910008.740:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/cups/backend/cups-pdf" pid=303 comm="apparmor_parser"
+[    2.970325] systemd[1]: Finished Load AppArmor profiles.
+[    2.971296] systemd[1]: Starting Load AppArmor profiles managed internally by snapd...
+[    3.036672] systemd[1]: Finished Load AppArmor profiles managed internally by snapd.
+[    3.164500] systemd[1]: Started Journal Service.
+[    3.172450] systemd-journald[228]: Received client request to flush runtime journal.
+[    3.176238] systemd-journald[228]: File /var/log/journal/c455b248004a419c87ce85eea238d727/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[    4.474547] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+[    4.550809] cryptd: max_cpu_qlen set to 1000
+[    4.618779] AVX2 version of gcm_enc/dec engaged.
+[    4.618780] AES CTR mode by8 optimization enabled
+[    5.434705] Adding 1998844k swap on /dev/sda1.  Priority:-2 extents:1 across:1998844k FS
+[    6.791339] kauditd_printk_skb: 30 callbacks suppressed
+[    6.791341] audit: type=1400 audit(1768910012.636:41): apparmor="DENIED" operation="capable" profile="/usr/sbin/cups-browsed" pid=496 comm="cups-browsed" capability=23  capname="sys_nice"
+[    7.686115] pcnet32 0000:00:03.0 enp0s3: link up, 100Mbps, full-duplex
+[    7.721784] e1000: enp0s8 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[    7.722060] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s8: link becomes ready
+[    7.734844] e1000: enp0s9 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[    7.735149] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s9: link becomes ready
+[    8.286649] device enp0s3 entered promiscuous mode
+[    8.294099] audit: type=1400 audit(1768910014.140:42): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=685 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.309931] audit: type=1400 audit(1768910014.156:43): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=685 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.310043] audit: type=1400 audit(1768910014.156:44): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=685 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.310097] audit: type=1400 audit(1768910014.156:45): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=685 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.313018] audit: type=1400 audit(1768910014.156:46): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=686 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.315136] audit: type=1400 audit(1768910014.156:47): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=686 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.315179] audit: type=1400 audit(1768910014.156:48): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=686 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.315240] audit: type=1400 audit(1768910014.156:49): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=686 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[   13.034349] rfkill: input handler disabled
+[  144.515653] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  144.606770] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  144.705919] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  144.749455] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  144.803213] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  144.819624] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  145.045041] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  145.072957] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  145.127361] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  145.301461] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  145.346520] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  145.364388] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  145.596494] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  145.630861] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  145.678794] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  145.780835] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  145.844639] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  145.861338] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  145.925980] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  146.028972] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  146.041225] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  146.115727] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  146.168464] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  146.179123] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  146.238072] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  146.278788] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  146.352461] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  146.386705] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  146.414478] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  146.466966] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  146.504513] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  146.585451] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  146.705596] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  146.738113] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  146.836451] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  146.859245] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  146.931515] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  146.949607] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  146.989900] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  147.128279] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  147.237509] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  147.361379] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  147.474413] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  147.648877] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  147.743710] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  147.817321] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  147.969806] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  148.326474] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  148.477951] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  148.732832] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  148.865524] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  149.087200] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  149.385376] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  149.505691] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  149.576477] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  149.664088] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  149.732898] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  149.910399] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  149.979833] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  150.051229] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  150.182404] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  150.355221] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  150.458890] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  150.552261] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  150.645527] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  150.741596] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  150.863610] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  150.953984] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  151.037665] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  151.133826] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  151.272583] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  151.431661] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  151.585522] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  151.704027] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  151.846823] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  152.026544] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  152.123329] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  152.248654] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  152.329456] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  152.529304] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  152.636207] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  152.711432] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  152.814701] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  152.960108] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  152.997374] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  153.074878] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  153.208947] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  153.283833] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  153.370688] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  153.446807] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  153.518166] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  153.611408] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  153.676439] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  153.745826] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  153.824856] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  153.951935] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  204.188663] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  204.400826] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  204.459545] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  204.587011] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  204.729199] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  204.826587] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  204.914206] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  205.011711] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  205.275992] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  205.390028] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  205.428543] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  205.451796] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  205.519107] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  205.534174] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  205.583636] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  205.618037] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  205.652369] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  205.682365] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  205.708333] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  205.743074] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  205.778156] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  205.854751] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  205.908143] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  205.925513] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  205.969931] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  205.986899] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  206.028271] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  206.055408] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  206.091672] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  206.130630] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  206.183255] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  206.213381] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  206.284866] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  206.290995] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  206.353680] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  206.366671] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  206.425358] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  206.435672] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  206.508471] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  206.535250] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  206.670272] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  206.694989] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  206.779068] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  206.898179] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  206.931523] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  207.072544] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  207.142547] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  207.160904] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  207.284418] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  207.304671] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  207.392444] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  207.449221] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  207.495890] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  207.543655] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  207.621931] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  207.686764] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  207.722955] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  207.789637] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  207.871580] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  207.933523] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  207.979248] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.035024] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.129582] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.210247] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.270891] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.328218] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.440373] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.496784] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.588812] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.682746] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.738039] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.793591] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.862772] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.893941] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.936857] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  208.981838] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  209.001384] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  209.056088] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  209.115064] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  209.148202] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  209.189212] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  209.337890] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  209.384208] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  209.694774] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  209.835611] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  210.206355] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  210.513824] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  210.660862] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  210.782000] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  211.087906] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  211.199266] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  211.379853] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  211.541841] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  216.230521] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  216.395376] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  216.879330] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  217.014995] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  217.095508] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  217.196997] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  217.365546] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  217.462026] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  217.750321] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  217.842382] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  217.963515] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  218.062649] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  218.166788] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  218.330026] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  218.681754] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  218.861778] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  218.989208] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  219.070416] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  221.564747] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  237.087691] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  237.533996] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  237.845397] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  238.031537] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  238.298999] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  238.479912] AAAAA-TCP_FORW: name:enp0s3: saddr:100932208: daddr:16783984
+[  238.527968] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  238.951555] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  240.360051] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  241.298926] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  241.622375] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  241.835183] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  242.447808] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  242.683160] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  242.806943] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  243.027117] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  243.188262] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  243.367055] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  243.496588] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  243.681051] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  243.863271] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  243.959327] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  244.076684] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  244.406437] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  244.530889] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  244.751023] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  245.144232] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  245.228793] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  245.429890] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  245.555933] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  245.690090] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  465.760044] rfkill: input handler enabled
+[  475.116371] rfkill: input handler disabled
+[  649.495375] device enp0s3 left promiscuous mode
