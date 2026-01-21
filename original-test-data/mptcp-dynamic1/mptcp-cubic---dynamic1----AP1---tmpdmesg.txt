@@ -1,0 +1,1518 @@
+[    0.000000] Linux version 5.4.243-mptcp (root@ztg) (gcc version 12.2.0 (Debian 12.2.0-14+deb12u1)) #53 SMP Wed Dec 24 23:28:15 CST 2025
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.4.243-mptcp root=UUID=98415a12-53b7-4144-8265-0f7ece09e445 ro quiet splash
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Hygon HygonGenuine
+[    0.000000]   Centaur CentaurHauls
+[    0.000000]   zhaoxin   Shanghai  
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007ffeffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007fff0000-0x000000007fffffff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.5 present.
+[    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000000] kvm-clock: cpu 0, msr 2ba01001, primary cpu clock
+[    0.000000] kvm-clock: using sched offset of 4469337671 cycles
+[    0.000003] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000005] tsc: Detected 2100.000 MHz processor
+[    0.001898] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.001900] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.001904] last_pfn = 0x7fff0 max_arch_pfn = 0x400000000
+[    0.001973] MTRR default type: uncachable
+[    0.001974] MTRR fixed ranges enabled:
+[    0.001976]   00000-9FFFF write-back
+[    0.001976]   A0000-BFFFF uncachable
+[    0.001977]   C0000-FFFFF write-protect
+[    0.001978] MTRR variable ranges enabled:
+[    0.001979]   0 base 000000000000 mask 3FFF80000000 write-back
+[    0.001980]   1 disabled
+[    0.001980]   2 disabled
+[    0.001981]   3 disabled
+[    0.001981]   4 disabled
+[    0.001982]   5 disabled
+[    0.001982]   6 disabled
+[    0.001982]   7 disabled
+[    0.001983]   8 disabled
+[    0.001983]   9 disabled
+[    0.001984]   10 disabled
+[    0.001984]   11 disabled
+[    0.001985]   12 disabled
+[    0.001985]   13 disabled
+[    0.001985]   14 disabled
+[    0.001986]   15 disabled
+[    0.002003] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.002139] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+[    0.092279] check: Scanning 1 areas for low memory corruption
+[    0.092434] RAMDISK: [mem 0x32271000-0x3512ffff]
+[    0.092442] ACPI: Early table checksum verification disabled
+[    0.092446] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+[    0.092450] ACPI: XSDT 0x000000007FFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+[    0.092456] ACPI: FACP 0x000000007FFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+[    0.092463] ACPI: DSDT 0x000000007FFF02E0 002353 (v02 VBOX   VBOXBIOS 00000002 VBOX 00029BF3)
+[    0.092467] ACPI: FACS 0x000000007FFF0200 000040
+[    0.092470] ACPI: FACS 0x000000007FFF0200 000040
+[    0.092473] ACPI: APIC 0x000000007FFF0240 000054 (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+[    0.092477] ACPI: SSDT 0x000000007FFF02A0 000038 (v01 VBOX   VBOXCPUT 00000002 VBOX 00029BF3)
+[    0.092481] ACPI: Reserving FACP table memory at [mem 0x7fff00f0-0x7fff01e3]
+[    0.092482] ACPI: Reserving DSDT table memory at [mem 0x7fff02e0-0x7fff2632]
+[    0.092482] ACPI: Reserving FACS table memory at [mem 0x7fff0200-0x7fff023f]
+[    0.092483] ACPI: Reserving FACS table memory at [mem 0x7fff0200-0x7fff023f]
+[    0.092483] ACPI: Reserving APIC table memory at [mem 0x7fff0240-0x7fff0293]
+[    0.092484] ACPI: Reserving SSDT table memory at [mem 0x7fff02a0-0x7fff02d7]
+[    0.092498] ACPI: Local APIC address 0xfee00000
+[    0.092684] No NUMA configuration found
+[    0.092685] Faking a node at [mem 0x0000000000000000-0x000000007ffeffff]
+[    0.092695] NODE_DATA(0) allocated [mem 0x7ffc5000-0x7ffeffff]
+[    0.092978] Zone ranges:
+[    0.092978]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.092979]   DMA32    [mem 0x0000000001000000-0x000000007ffeffff]
+[    0.092980]   Normal   empty
+[    0.092981]   Device   empty
+[    0.092982] Movable zone start for each node
+[    0.092984] Early memory node ranges
+[    0.092985]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.092986]   node   0: [mem 0x0000000000100000-0x000000007ffeffff]
+[    0.092989] Zeroed struct page in unavailable ranges: 114 pages
+[    0.092990] Initmem setup node 0 [mem 0x0000000000001000-0x000000007ffeffff]
+[    0.092991] On node 0 totalpages: 524174
+[    0.092992]   DMA zone: 64 pages used for memmap
+[    0.092992]   DMA zone: 21 pages reserved
+[    0.092993]   DMA zone: 3998 pages, LIFO batch:0
+[    0.093071]   DMA32 zone: 8128 pages used for memmap
+[    0.093072]   DMA32 zone: 520176 pages, LIFO batch:63
+[    0.102692] ACPI: PM-Timer IO Port: 0x4008
+[    0.102696] ACPI: Local APIC address 0xfee00000
+[    0.102762] IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+[    0.102766] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.102768] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+[    0.102769] ACPI: IRQ0 used by override.
+[    0.102771] ACPI: IRQ9 used by override.
+[    0.102773] Using ACPI (MADT) for SMP configuration information
+[    0.102779] smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+[    0.102801] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.102803] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.102803] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.102804] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.102805] [mem 0x80000000-0xfebfffff] available for PCI devices
+[    0.102806] Booting paravirtualized kernel on KVM
+[    0.102809] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.102813] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:1 nr_cpu_ids:1 nr_node_ids:1
+[    0.103844] percpu: Embedded 60 pages/cpu s208896 r8192 d28672 u2097152
+[    0.103849] pcpu-alloc: s208896 r8192 d28672 u2097152 alloc=1*2097152
+[    0.103850] pcpu-alloc: [0] 0 
+[    0.103875] Built 1 zonelists, mobility grouping on.  Total pages: 515961
+[    0.103876] Policy zone: DMA32
+[    0.103877] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.4.243-mptcp root=UUID=98415a12-53b7-4144-8265-0f7ece09e445 ro quiet splash
+[    0.104716] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.104982] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.105032] mem auto-init: stack:off, heap alloc:on, heap free:off
+[    0.105035] Calgary: detecting Calgary via BIOS EBDA area
+[    0.105035] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+[    0.110139] Memory: 1967332K/2096696K available (14339K kernel code, 2398K rwdata, 4712K rodata, 2728K init, 17260K bss, 129364K reserved, 0K cma-reserved)
+[    0.111081] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.111097] ftrace: allocating 43186 entries in 169 pages
+[    0.129073] rcu: Hierarchical RCU implementation.
+[    0.129075] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=1.
+[    0.129076] 	Tasks RCU enabled.
+[    0.129077] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.129078] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.132040] NR_IRQS: 524544, nr_irqs: 256, preallocated irqs: 16
+[    0.132248] random: crng init done
+[    0.141572] Console: colour VGA+ 80x25
+[    0.141576] printk: console [tty0] enabled
+[    0.141595] ACPI: Core revision 20190816
+[    0.141685] APIC: Switch to symmetric I/O mode setup
+[    0.141933] x2apic enabled
+[    0.142171] Switched APIC routing to physical x2apic.
+[    0.143300] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.143325] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x1e4530a99b6, max_idle_ns: 440795257976 ns
+[    0.143330] Calibrating delay loop (skipped) preset value.. 4200.00 BogoMIPS (lpj=8400000)
+[    0.143332] pid_max: default: 32768 minimum: 301
+[    0.143359] LSM: Security Framework initializing
+[    0.143368] Yama: becoming mindful.
+[    0.143393] AppArmor: AppArmor initialized
+[    0.143424] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.143428] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.143438] *** VALIDATE tmpfs ***
+[    0.143564] *** VALIDATE proc ***
+[    0.143602] *** VALIDATE cgroup1 ***
+[    0.143603] *** VALIDATE cgroup2 ***
+[    0.143743] process: using mwait in idle threads
+[    0.143748] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+[    0.143749] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+[    0.143768] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.143773] Spectre V2 : Mitigation: Retpolines
+[    0.143774] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.143774] Spectre V2 : Spectre v2 / SpectreRSB : Filling RSB on VMEXIT
+[    0.143775] RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+[    0.144129] RETBleed: Vulnerable
+[    0.144130] Speculative Store Bypass: Vulnerable
+[    0.144134] TAA: Mitigation: TSX disabled
+[    0.144135] MMIO Stale Data: Mitigation: Clear CPU buffers
+[    0.148312] Freeing SMP alternatives memory: 40K
+[    0.260269] smpboot: CPU0: Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz (family: 0x6, model: 0x55, stepping: 0x7)
+[    0.260362] Performance Events: unsupported p6 CPU model 85 no PMU driver, software events only.
+[    0.260396] rcu: Hierarchical SRCU implementation.
+[    0.260855] NMI watchdog: Perf NMI watchdog permanently disabled
+[    0.260887] smp: Bringing up secondary CPUs ...
+[    0.260888] smp: Brought up 1 node, 1 CPU
+[    0.260889] smpboot: Max logical packages: 1
+[    0.260890] smpboot: Total of 1 processors activated (4200.00 BogoMIPS)
+[    0.261848] devtmpfs: initialized
+[    0.261889] x86/mm: Memory block size: 128MB
+[    0.262206] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.262210] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.262250] pinctrl core: initialized pinctrl subsystem
+[    0.262343] PM: RTC time: 17:44:54, date: 2026-01-13
+[    0.262439] NET: Registered protocol family 16
+[    0.262509] audit: initializing netlink subsys (disabled)
+[    0.262629] EISA bus registered
+[    0.262630] cpuidle: using governor ladder
+[    0.262631] cpuidle: using governor menu
+[    0.262664] ACPI: bus type PCI registered
+[    0.262666] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.262772] PCI: Using configuration type 1 for base access
+[    0.263554] audit: type=2000 audit(1768297500.379:1): state=initialized audit_enabled=0 res=1
+[    0.263623] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.264382] ACPI: Added _OSI(Module Device)
+[    0.264382] ACPI: Added _OSI(Processor Device)
+[    0.264383] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.264384] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.264385] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.264385] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.264386] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    0.266324] ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    0.267813] ACPI: Interpreter enabled
+[    0.267823] ACPI: (supports S0 S5)
+[    0.267824] ACPI: Using IOAPIC for interrupt routing
+[    0.268028] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.268132] ACPI: Enabled 2 GPEs in block 00 to 07
+[    0.272928] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.272933] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+[    0.273372] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    0.273380] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.273757] PCI host bridge to bus 0000:00
+[    0.273759] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.273760] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.273762] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.273763] pci_bus 0000:00: root bus resource [mem 0x80000000-0xfdffffff window]
+[    0.273764] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.273808] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+[    0.274726] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+[    0.275457] pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+[    0.275828] pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+[    0.275982] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.275983] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.275984] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.275985] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.276519] pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000
+[    0.279406] pci 0000:00:02.0: reg 0x10: [io  0xd010-0xd01f]
+[    0.283373] pci 0000:00:02.0: reg 0x14: [mem 0xe0000000-0xe7ffffff pref]
+[    0.286071] pci 0000:00:02.0: reg 0x18: [mem 0xf0000000-0xf01fffff]
+[    0.296112] pci 0000:00:03.0: [1022:2000] type 00 class 0x020000
+[    0.296783] pci 0000:00:03.0: reg 0x10: [io  0xd020-0xd03f]
+[    0.297395] pci 0000:00:03.0: reg 0x14: [mem 0xf0200000-0xf0200fff]
+[    0.301740] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+[    0.302418] pci 0000:00:04.0: reg 0x10: [io  0xd040-0xd05f]
+[    0.303027] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+[    0.303443] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+[    0.306976] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+[    0.307571] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+[    0.307585] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+[    0.308163] pci 0000:00:08.0: [1022:2000] type 00 class 0x020000
+[    0.308833] pci 0000:00:08.0: reg 0x10: [io  0xd060-0xd07f]
+[    0.309448] pci 0000:00:08.0: reg 0x14: [mem 0xf0804000-0xf0804fff]
+[    0.312720] pci 0000:00:09.0: [8086:100e] type 00 class 0x020000
+[    0.313422] pci 0000:00:09.0: reg 0x10: [mem 0xf0820000-0xf083ffff]
+[    0.314624] pci 0000:00:09.0: reg 0x18: [io  0xd080-0xd087]
+[    0.324311] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+[    0.324592] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+[    0.324705] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+[    0.324807] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+[    0.325050] iommu: Default domain type: Translated 
+[    0.325109] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.325111] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.325112] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.325113] vgaarb: loaded
+[    0.325308] SCSI subsystem initialized
+[    0.325339] libata version 3.00 loaded.
+[    0.325363] ACPI: bus type USB registered
+[    0.325378] usbcore: registered new interface driver usbfs
+[    0.325384] usbcore: registered new interface driver hub
+[    0.325389] usbcore: registered new device driver usb
+[    0.325416] pps_core: LinuxPPS API ver. 1 registered
+[    0.325417] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.325419] PTP clock support registered
+[    0.325454] EDAC MC: Ver: 3.0.0
+[    0.327451] PCI: Using ACPI for IRQ routing
+[    0.327452] PCI: pci_cache_line_size set to 64 bytes
+[    0.327618] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+[    0.327621] e820: reserve RAM buffer [mem 0x7fff0000-0x7fffffff]
+[    0.328444] NetLabel: Initializing
+[    0.328445] NetLabel:  domain hash size = 128
+[    0.328445] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.328464] NetLabel:  unlabeled traffic allowed by default
+[    0.329442] clocksource: Switched to clocksource kvm-clock
+[    0.341900] *** VALIDATE bpf ***
+[    0.341961] VFS: Disk quotas dquot_6.6.0
+[    0.341974] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.341997] *** VALIDATE ramfs ***
+[    0.341999] *** VALIDATE hugetlbfs ***
+[    0.342081] AppArmor: AppArmor Filesystem Enabled
+[    0.342105] pnp: PnP ACPI init
+[    0.342171] pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+[    0.342239] pnp 00:01: Plug and Play ACPI device, IDs PNP0f03 (active)
+[    0.342972] pnp: PnP ACPI: found 2 devices
+[    0.343127] thermal_sys: Registered thermal governor 'fair_share'
+[    0.343127] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.343127] thermal_sys: Registered thermal governor 'step_wise'
+[    0.343127] thermal_sys: Registered thermal governor 'user_space'
+[    0.343127] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.348513] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.348552] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.348553] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.348554] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.348556] pci_bus 0000:00: resource 7 [mem 0x80000000-0xfdffffff window]
+[    0.348612] NET: Registered protocol family 2
+[    0.348685] IP idents hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.349082] MPTCP tokens hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.349102] MPTCP request tokens hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.349126] default registered
+[    0.349127] default registered
+[    0.349127] MPTCP: Stable release v0.96
+[    0.349132] tcp_listen_portaddr_hash hash table entries: 1024 (order: 2, 16384 bytes, linear)
+[    0.349210] TCP established hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.349275] TCP bind hash table entries: 16384 (order: 6, 262144 bytes, linear)
+[    0.349301] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.350010] UDP hash table entries: 1024 (order: 3, 32768 bytes, linear)
+[    0.350021] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes, linear)
+[    0.350052] NET: Registered protocol family 1
+[    0.350061] NET: Registered protocol family 44
+[    0.350083] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.350095] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    0.350148] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.350212] PCI: CLS 0 bytes, default 64
+[    0.350257] Trying to unpack rootfs image as initramfs...
+[    0.527154] Freeing initrd memory: 47868K
+[    0.527154] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x1e4530a99b6, max_idle_ns: 440795257976 ns
+[    0.527154] clocksource: Switched to clocksource tsc
+[    0.527154] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[    0.527154] check: Scanning for low memory corruption every 60 seconds
+[    0.527154] Initialise system trusted keyrings
+[    0.527154] Key type blacklist registered
+[    0.527154] workingset: timestamp_bits=36 max_order=19 bucket_order=0
+[    0.527154] zbud: loaded
+[    0.527154] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.527154] fuse: init (API version 7.31)
+[    0.527154] *** VALIDATE fuse ***
+[    0.527154] *** VALIDATE fuse ***
+[    0.527154] Platform Keyring initialized
+[    0.539071] Key type asymmetric registered
+[    0.539072] Asymmetric key parser 'x509' registered
+[    0.539082] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+[    0.539123] io scheduler mq-deadline registered
+[    0.539246] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    0.539456] ACPI: AC Adapter [AC] (on-line)
+[    0.539501] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    0.539531] ACPI: Power Button [PWRF]
+[    0.539599] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    0.539614] ACPI: Sleep Button [SLPF]
+[    0.539840] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    0.540994] Linux agpgart interface v0.103
+[    0.635118] loop: module loaded
+[    0.635250] ata_piix 0000:00:01.1: version 2.13
+[    0.635646] scsi host0: ata_piix
+[    0.635731] scsi host1: ata_piix
+[    0.635757] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+[    0.635758] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+[    0.635833] tun: Universal TUN/TAP device driver, 1.6
+[    0.636132] PPP generic driver version 2.4.2
+[    0.636172] VFIO - User Level meta-driver version: 0.3
+[    0.636413] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.636418] ehci-pci: EHCI PCI platform driver
+[    0.636431] ehci-platform: EHCI generic platform driver
+[    0.636437] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.636439] ohci-pci: OHCI PCI platform driver
+[    0.636445] ohci-platform: OHCI generic platform driver
+[    0.636450] uhci_hcd: USB Universal Host Controller Interface driver
+[    0.636514] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[    0.636956] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    0.636959] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    0.637043] mousedev: PS/2 mouse device common for all mice
+[    0.637305] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[    0.637703] rtc_cmos rtc_cmos: registered as rtc0
+[    0.637715] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+[    0.637720] i2c /dev entries driver
+[    0.637761] device-mapper: uevent: version 1.0.3
+[    0.637803] device-mapper: ioctl: 4.41.0-ioctl (2019-09-16) initialised: dm-devel@redhat.com
+[    0.637818] platform eisa.0: Probing EISA bus 0
+[    0.637820] platform eisa.0: EISA: Cannot allocate resource for mainboard
+[    0.637822] platform eisa.0: Cannot allocate resource for EISA slot 1
+[    0.637823] platform eisa.0: Cannot allocate resource for EISA slot 2
+[    0.637824] platform eisa.0: Cannot allocate resource for EISA slot 3
+[    0.637825] platform eisa.0: Cannot allocate resource for EISA slot 4
+[    0.637826] platform eisa.0: Cannot allocate resource for EISA slot 5
+[    0.637827] platform eisa.0: Cannot allocate resource for EISA slot 6
+[    0.637828] platform eisa.0: Cannot allocate resource for EISA slot 7
+[    0.637828] platform eisa.0: Cannot allocate resource for EISA slot 8
+[    0.637829] platform eisa.0: EISA: Detected 0 cards
+[    0.637832] intel_pstate: CPU model not supported
+[    0.637841] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.637894] drop_monitor: Initializing network drop monitor service
+[    0.638053] NET: Registered protocol family 10
+[    0.643220] Segment Routing with IPv6
+[    0.643250] fullmesh registered
+[    0.643251] ndiffports registered
+[    0.643253] binder registered
+[    0.643254] roundrobin registered
+[    0.643255] redundant registered
+[    0.643255] blest registered
+[    0.643256] ecf registered
+[    0.643257] NET: Registered protocol family 17
+[    0.643279] Key type dns_resolver registered
+[    0.643279] RAS: Correctable Errors collector initialized.
+[    0.643279] IPI shorthand broadcast: enabled
+[    0.643279] sched_clock: Marking stable (628191852, 11088088)->(640429790, -1149850)
+[    0.643457] registered taskstats version 1
+[    0.643466] Loading compiled-in X.509 certificates
+[    0.644055] Loaded X.509 cert 'Build time autogenerated kernel key: 6909f3744cebb3d0de528d5887b96a727de79b1e'
+[    0.644072] zswap: loaded using pool lzo/zbud
+[    0.644124] Key type ._fscrypt registered
+[    0.644124] Key type .fscrypt registered
+[    0.648593] Key type big_key registered
+[    0.650777] Key type encrypted registered
+[    0.650780] AppArmor: AppArmor sha1 policy hashing enabled
+[    0.650787] ima: No TPM chip found, activating TPM-bypass!
+[    0.650791] ima: Allocated hash algorithm: sha1
+[    0.650797] ima: No architecture policies found
+[    0.650806] evm: Initialising EVM extended attributes:
+[    0.650806] evm: security.selinux
+[    0.650807] evm: security.SMACK64
+[    0.650807] evm: security.SMACK64EXEC
+[    0.650808] evm: security.SMACK64TRANSMUTE
+[    0.650808] evm: security.SMACK64MMAP
+[    0.650809] evm: security.apparmor
+[    0.650809] evm: security.ima
+[    0.650810] evm: security.capability
+[    0.650810] evm: HMAC attrs: 0x1
+[    0.651101] PM:   Magic number: 10:433:744
+[    0.651197] rtc_cmos rtc_cmos: setting system clock to 2026-01-13T17:44:55 UTC (1768326295)
+[    0.806747] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+[    0.806749] ata1.00: 209715200 sectors, multi 128: LBA 
+[    0.807493] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+[    0.807661] sd 0:0:0:0: [sda] 209715200 512-byte logical blocks: (107 GB/100 GiB)
+[    0.807668] sd 0:0:0:0: [sda] Write Protect is off
+[    0.807669] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    0.807679] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    0.807787] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    0.808582]  sda: sda1 sda2
+[    0.819186] sd 0:0:0:0: [sda] Attached SCSI disk
+[    0.820984] Freeing unused decrypted memory: 2040K
+[    0.821665] Freeing unused kernel image memory: 2728K
+[    0.821667] Write protecting the kernel read-only data: 22528k
+[    0.822317] Freeing unused kernel image memory: 2036K
+[    0.822696] Freeing unused kernel image memory: 1432K
+[    0.835603] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    0.835606] Run /init as init process
+[    0.922460] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[    0.922529] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input4
+[    0.933468] pcnet32: pcnet32.c:v1.35 21.Apr.2008 tsbogend@alpha.franken.de
+[    0.935070] piix4_smbus 0000:00:07.0: SMBus Host Controller at 0x4100, revision 0
+[    0.938674] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    0.938675] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    0.941336] pcnet32: PCnet/FAST III 79C973 at 0xd020, 08:00:27:b4:00:46 assigned IRQ 19
+[    0.941379] pcnet32: Found PHY 0022:561b at address 0
+[    0.941671] pcnet32: eth0: registered as PCnet/FAST III 79C973
+[    0.951849] pcnet32: PCnet/FAST III 79C973 at 0xd060, 08:00:27:4e:f8:43 assigned IRQ 16
+[    0.951892] pcnet32: Found PHY 0022:561b at address 0
+[    0.952172] pcnet32: eth1: registered as PCnet/FAST III 79C973
+[    0.953684] pcnet32: 2 cards_found
+[    1.015363] pcnet32 0000:00:03.0 enp0s3: renamed from eth0
+[    1.017113] pcnet32 0000:00:08.0 enp0s8: renamed from eth1
+[    1.152794] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+[    1.351465] e1000 0000:00:09.0 eth0: (PCI:33MHz:32-bit) 08:00:27:8b:a0:da
+[    1.351469] e1000 0000:00:09.0 eth0: Intel(R) PRO/1000 Network Connection
+[    1.352669] e1000 0000:00:09.0 enp0s9: renamed from eth0
+[    1.507441] EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: (null)
+[    1.601834] systemd[1]: Inserted module 'autofs4'
+[    1.615254] systemd[1]: systemd 245.4-4ubuntu3 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+[    1.615283] systemd[1]: Detected virtualization oracle.
+[    1.615286] systemd[1]: Detected architecture x86-64.
+[    1.616598] systemd[1]: Set hostname to <ztg>.
+[    1.744554] systemd[1]: /lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+[    1.798532] systemd[1]: Created slice system-modprobe.slice.
+[    1.798711] systemd[1]: Created slice User and Session Slice.
+[    1.798753] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    1.798901] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    1.798937] systemd[1]: Reached target User and Group Name Lookups.
+[    1.798946] systemd[1]: Reached target Remote File Systems.
+[    1.798954] systemd[1]: Reached target Slices.
+[    1.799551] systemd[1]: Listening on Syslog Socket.
+[    1.799620] systemd[1]: Listening on fsck to fsckd communication Socket.
+[    1.799656] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    1.799785] systemd[1]: Listening on Journal Audit Socket.
+[    1.799840] systemd[1]: Listening on Journal Socket (/dev/log).
+[    1.799906] systemd[1]: Listening on Journal Socket.
+[    1.799967] systemd[1]: Listening on udev Control Socket.
+[    1.800006] systemd[1]: Listening on udev Kernel Socket.
+[    1.800698] systemd[1]: Mounting Huge Pages File System...
+[    1.801584] systemd[1]: Mounting POSIX Message Queue File System...
+[    1.802439] systemd[1]: Mounting Kernel Debug File System...
+[    1.803311] systemd[1]: Mounting Kernel Trace File System...
+[    1.805516] systemd[1]: Starting Journal Service...
+[    1.829839] systemd[1]: Starting Set the console keyboard layout...
+[    1.835049] systemd[1]: Starting Create list of static device nodes for the current kernel...
+[    1.839976] systemd[1]: Starting Load Kernel Module drm...
+[    1.844704] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    1.844738] systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+[    1.855923] systemd[1]: Starting Load Kernel Modules...
+[    1.856696] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    1.857466] systemd[1]: Starting udev Coldplug all Devices...
+[    1.858231] systemd[1]: Starting Uncomplicated firewall...
+[    1.859640] systemd[1]: Mounted Huge Pages File System.
+[    1.859722] systemd[1]: Mounted POSIX Message Queue File System.
+[    1.859797] systemd[1]: Mounted Kernel Debug File System.
+[    1.859866] systemd[1]: Mounted Kernel Trace File System.
+[    1.902429] systemd[1]: Finished Create list of static device nodes for the current kernel.
+[    1.902767] systemd[1]: modprobe@drm.service: Succeeded.
+[    1.908068] systemd[1]: Finished Load Kernel Module drm.
+[    1.908682] systemd[1]: Finished Uncomplicated firewall.
+[    1.909973] EXT4-fs (sda2): re-mounted. Opts: errors=remount-ro
+[    1.913098] systemd[1]: Finished Remount Root and Kernel File Systems.
+[    1.913873] systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+[    1.913929] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+[    1.921101] systemd[1]: Starting Load/Save Random Seed...
+[    1.925872] systemd[1]: Starting Create System Users...
+[    1.952323] systemd[1]: Finished Load/Save Random Seed.
+[    1.954580] systemd[1]: Finished Create System Users.
+[    1.955274] systemd[1]: Starting Create Static Device Nodes in /dev...
+[    1.961052] lp: driver loaded but no devices found
+[    1.981950] ppdev: user-space parallel port driver
+[    2.010385] systemd[1]: Finished Create Static Device Nodes in /dev.
+[    2.011111] systemd[1]: Starting udev Kernel Device Manager...
+[    2.029741] systemd[1]: Finished udev Coldplug all Devices.
+[    2.062862] [drm] DMA map mode: Caching DMA mappings.
+[    2.062924] [drm] Capabilities:
+[    2.062925] [drm]   Rect copy.
+[    2.062925] [drm]   Cursor.
+[    2.062925] [drm]   Cursor bypass.
+[    2.062926] [drm]   Cursor bypass 2.
+[    2.062926] [drm]   Alpha cursor.
+[    2.062926] [drm]   Extended Fifo.
+[    2.062927] [drm]   Pitchlock.
+[    2.062927] [drm]   Irq mask.
+[    2.062927] [drm]   GMR.
+[    2.062928] [drm]   Traces.
+[    2.062928] [drm]   GMR2.
+[    2.062928] [drm]   Screen Object 2.
+[    2.062929] [drm]   Command Buffers.
+[    2.062929] [drm]   Command Buffers 2.
+[    2.062929] [drm]   Guest Backed Resources.
+[    2.062930] [drm] Max GMR ids is 8192
+[    2.062931] [drm] Max number of GMR pages is 1048576
+[    2.062931] [drm] Max dedicated hypervisor surface memory is 393216 kiB
+[    2.062932] [drm] Maximum display memory size is 131072 kiB
+[    2.062933] [drm] VRAM at 0xe0000000 size is 131072 kiB
+[    2.062933] [drm] MMIO at 0xf0000000 size is 2048 kiB
+[    2.067293] [TTM] Zone  kernel: Available graphics memory: 1011738 KiB
+[    2.067294] [TTM] Initializing pool allocator
+[    2.067323] [TTM] Initializing DMA pool allocator
+[    2.067351] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.067351] [drm] No driver support for vblank timestamp query.
+[    2.067560] [drm] Screen Target Display device initialized
+[    2.067740] [drm] width 720
+[    2.067748] [drm] height 400
+[    2.067752] [drm] bpp 32
+[    2.068308] [drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+[    2.069383] [drm] Using command buffers with DMA pool.
+[    2.069387] [drm] DX: no.
+[    2.069387] [drm] Atomic: yes.
+[    2.069388] [drm] SM4_1: no.
+[    2.069406] [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+[    2.070304] [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+[    2.083880] fbcon: svgadrmfb (fb0) is primary device
+[    2.093248] Console: switching to colour frame buffer device 100x37
+[    2.098802] [drm] Initialized vmwgfx 2.15.0 20180704 for 0000:00:02.0 on minor 0
+[    2.099673] systemd[1]: Finished Load Kernel Modules.
+[    2.100599] systemd[1]: Mounting FUSE Control File System...
+[    2.101774] systemd[1]: Mounting Kernel Configuration File System...
+[    2.123378] systemd[1]: Starting Apply Kernel Variables...
+[    2.129456] systemd[1]: Finished Set the console keyboard layout.
+[    2.129558] systemd[1]: Reached target Local File Systems (Pre).
+[    2.141040] systemd[1]: Mounting Mount unit for bare, revision 5...
+[    2.144782] systemd[1]: Mounting Mount unit for core18, revision 1705...
+[    2.151973] systemd[1]: Mounting Mount unit for gnome-3-34-1804, revision 24...
+[    2.176820] systemd[1]: Mounting Mount unit for gtk-common-themes, revision 1506...
+[    2.178229] systemd[1]: Mounting Mount unit for gtk-common-themes, revision 1535...
+[    2.183038] systemd[1]: Mounting Mount unit for snap-store, revision 433...
+[    2.196867] systemd[1]: Mounting Mount unit for snapd, revision 25935...
+[    2.199276] systemd[1]: Mounted FUSE Control File System.
+[    2.199373] systemd[1]: Mounted Kernel Configuration File System.
+[    2.211868] systemd[1]: Finished Apply Kernel Variables.
+[    2.213632] systemd[1]: Mounted Mount unit for bare, revision 5.
+[    2.213720] systemd[1]: Mounted Mount unit for core18, revision 1705.
+[    2.213772] systemd[1]: Condition check resulted in VMware vmblock fuse mount being skipped.
+[    2.216352] systemd[1]: Mounted Mount unit for gnome-3-34-1804, revision 24.
+[    2.220649] systemd[1]: Started udev Kernel Device Manager.
+[    2.221300] systemd[1]: Starting Show Plymouth Boot Screen...
+[    2.230539] systemd[1]: Received SIGRTMIN+20 from PID 275 (plymouthd).
+[    2.250737] systemd[1]: Mounted Mount unit for gtk-common-themes, revision 1506.
+[    2.270766] systemd[1]: Started Show Plymouth Boot Screen.
+[    2.270910] systemd[1]: Condition check resulted in Dispatch Password Requests to Console Directory Watch being skipped.
+[    2.270998] systemd[1]: Started Forward Password Requests to Plymouth Directory Watch.
+[    2.271030] systemd[1]: Reached target Local Encrypted Volumes.
+[    2.288841] systemd[1]: Mounted Mount unit for snap-store, revision 433.
+[    2.314153] systemd[1]: Mounted Mount unit for gtk-common-themes, revision 1535.
+[    2.314426] systemd[1]: Mounted Mount unit for snapd, revision 25935.
+[    2.314595] systemd[1]: Reached target Local File Systems.
+[    2.315439] systemd[1]: Starting Load AppArmor profiles...
+[    2.318871] systemd[1]: Starting Set console font and keymap...
+[    2.328293] systemd[1]: Starting Tell Plymouth To Write Out Runtime Data...
+[    2.335195] systemd[1]: Condition check resulted in Store a System Token in an EFI Variable being skipped.
+[    2.335226] systemd[1]: Condition check resulted in Commit a transient machine-id on disk being skipped.
+[    2.336113] systemd[1]: Finished Set console font and keymap.
+[    2.355962] systemd[1]: Received SIGRTMIN+20 from PID 275 (plymouthd).
+[    2.357187] systemd[1]: plymouth-read-write.service: Succeeded.
+[    2.357435] systemd[1]: Finished Tell Plymouth To Write Out Runtime Data.
+[    2.378675] audit: type=1400 audit(1768326297.220:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=300 comm="apparmor_parser"
+[    2.378676] audit: type=1400 audit(1768326297.220:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=300 comm="apparmor_parser"
+[    2.385161] audit: type=1400 audit(1768326297.228:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/tcpdump" pid=301 comm="apparmor_parser"
+[    2.430589] audit: type=1400 audit(1768326297.264:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince" pid=303 comm="apparmor_parser"
+[    2.430591] audit: type=1400 audit(1768326297.264:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince//sanitized_helper" pid=303 comm="apparmor_parser"
+[    2.430592] audit: type=1400 audit(1768326297.264:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-previewer" pid=303 comm="apparmor_parser"
+[    2.430594] audit: type=1400 audit(1768326297.264:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-previewer//sanitized_helper" pid=303 comm="apparmor_parser"
+[    2.430595] audit: type=1400 audit(1768326297.264:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-thumbnailer" pid=303 comm="apparmor_parser"
+[    2.462232] audit: type=1400 audit(1768326297.308:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/cups/backend/cups-pdf" pid=304 comm="apparmor_parser"
+[    2.520781] systemd[1]: Finished Load AppArmor profiles.
+[    2.521766] systemd[1]: Starting Load AppArmor profiles managed internally by snapd...
+[    2.642562] systemd[1]: Finished Load AppArmor profiles managed internally by snapd.
+[    2.809581] systemd[1]: Started Journal Service.
+[    2.817489] systemd-journald[229]: Received client request to flush runtime journal.
+[    2.821651] systemd-journald[229]: File /var/log/journal/c455b248004a419c87ce85eea238d727/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[    4.089912] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+[    4.100661] cryptd: max_cpu_qlen set to 1000
+[    4.162683] AVX2 version of gcm_enc/dec engaged.
+[    4.162684] AES CTR mode by8 optimization enabled
+[    5.986477] Adding 1998844k swap on /dev/sda1.  Priority:-2 extents:1 across:1998844k FS
+[    7.124655] kauditd_printk_skb: 30 callbacks suppressed
+[    7.124656] audit: type=1400 audit(1768326301.968:41): apparmor="DENIED" operation="capable" profile="/usr/sbin/cups-browsed" pid=510 comm="cups-browsed" capability=23  capname="sys_nice"
+[    8.373426] pcnet32 0000:00:03.0 enp0s3: link up, 100Mbps, full-duplex
+[    8.392404] pcnet32 0000:00:08.0 enp0s8: link up, 100Mbps, full-duplex
+[    8.425763] e1000: enp0s9 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[    8.428158] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s9: link becomes ready
+[    8.978839] device enp0s3 entered promiscuous mode
+[    8.999597] device enp0s8 entered promiscuous mode
+[    9.051896] audit: type=1400 audit(1768326303.900:42): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=636 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    9.051993] audit: type=1400 audit(1768326303.900:43): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=636 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    9.052082] audit: type=1400 audit(1768326303.900:44): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=636 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    9.052142] audit: type=1400 audit(1768326303.900:45): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=636 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    9.063877] audit: type=1400 audit(1768326303.912:46): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=638 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    9.064270] audit: type=1400 audit(1768326303.912:47): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=638 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    9.065686] audit: type=1400 audit(1768326303.912:48): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=638 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    9.065799] audit: type=1400 audit(1768326303.912:49): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=638 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    9.065994] audit: type=1400 audit(1768326303.912:50): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=637 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[   14.894469] rfkill: input handler disabled
+[  285.564017] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  288.027850] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  288.028856] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  288.219215] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  288.220482] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  288.319727] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  288.320532] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  288.320550] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  288.465928] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  288.758622] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  288.759671] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  288.807941] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  288.882998] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  288.883717] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  289.053569] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  289.054593] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  289.151147] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  289.152345] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  289.152610] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  289.650224] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  289.797707] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  289.798643] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  289.985781] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  289.986701] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  290.077520] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  290.078522] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  290.079596] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  290.272669] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  290.273841] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  290.372910] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  290.373772] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  290.488201] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  290.489176] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  290.636310] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  290.702134] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  290.702894] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  290.896715] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  290.898136] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  290.952087] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  290.953245] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  291.100652] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  291.101800] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  291.196286] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  291.197354] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  291.278406] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  291.279712] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  291.360494] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  291.361777] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  291.593036] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  291.594213] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  291.634357] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  291.635513] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  291.709175] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  291.709900] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  291.928695] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  291.929694] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  292.015393] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  292.016560] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  292.058410] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  292.059139] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  292.370795] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  292.371857] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  292.495577] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  292.496379] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  292.556252] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  292.557031] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  292.678236] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  292.679326] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  292.998819] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  293.000002] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  293.035423] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  293.036132] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  293.060313] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  293.061067] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  293.154507] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  293.155206] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  293.292460] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  293.293770] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  293.383590] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  293.384839] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  293.643813] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  293.645237] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  293.846958] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  293.848044] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  293.900941] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  293.902122] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  294.101874] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  294.103089] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  294.154199] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  294.155230] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  294.234013] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  294.234763] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  294.370573] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  294.371407] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  294.446106] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  294.446832] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  294.514870] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  294.516036] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  294.622931] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  294.624243] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  294.707737] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  294.708911] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  294.795284] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  294.796526] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  294.861455] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  294.862602] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  294.998265] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  294.999524] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  295.107976] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  295.109223] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  295.151178] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  295.193852] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  295.318818] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  295.401975] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  295.444198] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  295.623167] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  295.624343] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  295.679496] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  295.680246] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  295.847594] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  295.848880] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  295.983395] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  295.984572] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  296.064365] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  296.065106] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  296.218019] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  296.219203] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  296.273569] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  296.274331] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  296.529307] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  296.530492] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  296.608068] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  296.609194] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  296.643952] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  296.645181] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  296.827220] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  296.828172] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  296.947013] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  296.948215] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  297.091783] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  297.093015] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  297.243154] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  297.243950] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  297.293676] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  297.295081] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  297.394137] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  297.395575] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  297.452895] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  297.453644] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  297.621281] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  297.666076] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  297.725208] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  297.755400] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  297.756623] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  297.869650] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  297.933188] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  297.934241] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  297.941969] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  297.961193] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  297.962511] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  297.997412] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  297.998543] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  298.155159] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  298.156316] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  298.384284] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  298.385256] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  298.418547] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  298.419450] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  298.559597] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  298.560803] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  298.615197] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  298.616531] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  298.792882] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  298.793948] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  298.926983] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  298.928223] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  299.129869] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  299.130847] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  299.259399] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  299.260307] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  299.428130] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  299.428892] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  299.451864] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  299.452597] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  299.521409] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  299.522938] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  299.617786] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  299.618668] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  299.650842] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  299.705759] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  299.735984] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  299.799523] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  299.800558] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  299.845229] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  299.937730] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  299.938453] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  299.978446] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  300.051762] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  300.052991] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  300.123544] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  300.191772] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  300.192513] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  300.287046] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  300.287816] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  300.378004] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  300.378738] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  300.450150] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  300.450885] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  300.487435] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  300.488200] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  300.591165] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  300.592309] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  300.629511] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  300.630633] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  300.712939] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  300.714118] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  300.740362] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  300.741950] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  300.832796] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  300.833947] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  300.913669] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  300.915225] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  300.950567] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  300.951668] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  301.063252] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  301.064578] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  321.558764] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  321.560672] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  321.700121] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  321.701384] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  321.843013] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  321.844246] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  321.945640] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  321.946786] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  322.095718] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  322.096969] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  322.300737] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  322.302161] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  322.356437] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  322.357607] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  322.491800] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  322.492892] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  322.701204] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  322.702399] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  322.831785] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  322.832912] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  322.887197] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  322.888296] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  322.997582] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  322.998618] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  323.139061] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  323.140336] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  323.313414] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  323.314538] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  323.377993] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  323.379049] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  323.459221] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  323.460522] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  323.733341] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  323.734424] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  323.792617] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  323.793606] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  323.845375] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  323.889858] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  323.960091] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  324.042043] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  324.187202] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  324.232066] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  324.233237] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  324.268029] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  324.365068] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  324.365920] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  324.445743] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  324.446941] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  324.557200] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  324.682515] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  324.684138] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  324.747791] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  324.749376] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  324.750078] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  324.906813] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  324.907904] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  325.055974] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  325.057061] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  325.232809] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  325.233863] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  325.290461] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  325.291705] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  325.450443] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  325.451431] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  325.586648] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  325.587861] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  325.685604] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  325.686673] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  325.767573] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  325.768919] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  325.832228] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  325.833202] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  325.957488] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  325.958675] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  326.024227] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  326.025223] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  326.147286] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  326.149174] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  326.280081] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  326.281545] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  326.376291] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  326.377490] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  326.438123] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  326.439323] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  326.484797] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  326.486024] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  326.574119] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  326.575206] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  326.627758] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  326.628855] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  326.720921] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  326.722020] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  326.822581] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  326.823685] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  326.928041] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  326.929227] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  327.223084] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  327.224330] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  327.252313] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  327.253552] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  327.426683] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  327.427912] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  327.723744] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  327.724899] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  327.823921] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  327.825017] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  328.026472] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  328.027628] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  328.247043] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  328.248329] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  328.281554] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  328.282736] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  328.325820] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  328.370261] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  328.375054] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  328.412997] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  328.414145] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  328.456211] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  328.539182] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  328.566826] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  328.602236] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  328.603392] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  328.718195] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  328.719384] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  328.771766] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  328.772904] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  328.991526] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  328.992788] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  329.093317] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  329.096091] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  329.121910] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  329.124254] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  329.309444] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  329.311960] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  329.342249] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  329.344771] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  329.455593] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  329.458199] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  329.531453] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  329.533958] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  329.621262] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  329.623506] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  329.703129] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  329.705605] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  329.764310] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  329.766604] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  329.803352] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  329.805791] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  329.912584] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  329.915066] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  330.020734] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  330.021957] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  330.071406] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  330.072660] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  330.189677] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  330.190929] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  330.676506] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  330.677764] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  330.793253] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  330.794499] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  330.834170] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  330.835321] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  330.874262] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  330.875429] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  331.158761] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  331.160319] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  331.551445] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  331.552763] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  331.662258] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  331.663045] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  331.715742] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  331.716761] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  331.898960] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  331.900411] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  332.088402] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  332.089873] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  332.234492] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  332.235799] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  332.362625] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  332.363906] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  354.443370] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  354.444207] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  354.660812] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  354.661656] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  354.896373] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  354.897766] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  354.955556] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  354.956441] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  355.175471] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  355.176957] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  355.620855] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  355.622100] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  355.962507] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  355.963797] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  356.024136] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  356.025325] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  356.156045] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  356.157322] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  356.434433] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  356.435762] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  356.549476] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  356.550837] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  356.899848] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  356.901270] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  357.035669] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  357.036956] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  357.080998] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  357.082346] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  357.239563] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  357.240698] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  357.328664] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  357.329679] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  357.410889] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  357.412251] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  357.467684] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  357.468469] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  357.652307] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  357.653428] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  357.733612] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  357.734832] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  357.980253] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  357.981586] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  358.044468] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  358.045734] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  358.160684] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  358.161925] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  358.354598] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  358.355961] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  358.417336] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  358.418559] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  358.633261] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  358.634536] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  358.676355] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  358.677619] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  358.781987] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  358.782753] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  358.816968] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  358.817744] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  358.861101] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  358.862341] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  358.894743] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  358.895977] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  359.066719] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  359.068050] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  359.334643] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  359.335887] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  359.438295] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  359.439610] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  359.765008] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  359.766160] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  359.831509] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  359.832271] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  359.889917] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  359.891169] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  360.051145] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  360.052494] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  360.204359] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  360.205227] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  360.510801] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  360.512062] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  360.632506] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  360.633379] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  361.068852] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  361.070265] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  361.239418] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  361.240360] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  361.448330] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  361.449689] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  361.685947] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  361.686799] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  361.782458] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  361.784259] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  361.911620] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  361.912444] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  362.202097] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  362.202944] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  362.381047] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  362.381896] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  362.666088] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  362.667316] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  362.744985] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  362.746131] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  362.921100] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  362.922312] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  363.039771] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  363.040600] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  363.104719] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  363.105540] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  363.212253] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  363.213102] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  363.356407] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  363.357725] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  363.464120] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  363.464955] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  363.653383] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  363.654233] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  363.750861] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  363.751696] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  363.815588] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  363.816901] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  363.923349] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  363.924244] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  364.006209] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  364.007043] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  364.084561] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  364.085392] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  364.117986] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  364.118990] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  364.343566] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  364.344408] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  364.393704] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  364.394622] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  364.429848] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  364.430702] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  364.493135] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  364.494026] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  364.530246] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  364.531108] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  365.055448] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  365.056347] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  365.150742] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  365.151941] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  365.249502] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  365.250916] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  365.297852] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  365.299287] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  365.376684] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  365.378025] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  365.639499] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  365.640925] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  366.443989] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  366.445383] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  366.615136] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  366.616498] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  366.645730] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  366.646524] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  366.739531] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  366.740933] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  366.798617] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  366.800024] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  366.831078] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  366.831949] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  366.945786] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  366.946599] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  367.052111] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  367.052920] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  367.177021] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  367.179375] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  367.305798] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  367.307811] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  368.650492] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  368.651399] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  368.742866] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  368.743718] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  369.189398] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  369.190265] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  369.247397] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  369.248832] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  369.680970] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  369.682487] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  369.836317] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  369.837487] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  370.404920] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  370.406177] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  386.997082] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  387.118643] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  387.194580] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  387.518371] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  387.625785] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  387.771202] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  387.860918] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  387.938264] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  388.014909] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  388.134209] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  388.230909] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  388.349765] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  388.467337] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  388.606221] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  388.964119] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  389.054278] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  389.187134] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  389.329617] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  389.404749] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  389.631633] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  389.725024] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  389.973400] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  390.056192] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  390.361039] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  390.469695] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  390.571250] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  390.687858] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  390.802153] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  390.914203] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  391.078733] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  391.193628] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  391.254663] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  391.401889] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  391.573949] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  391.676684] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  391.739332] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  391.920241] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  392.019788] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  392.106246] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  392.169303] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  392.281720] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  392.534337] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  392.722116] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  392.777858] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  392.821590] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  393.045082] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  393.145968] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  393.297166] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  393.484028] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  393.635941] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  393.775862] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  393.890395] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  393.958887] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  393.961073] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  394.029609] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  394.155264] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  394.157176] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  394.352824] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  394.355287] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  394.557663] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  394.560608] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  394.814446] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  394.816386] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  395.019283] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  395.022019] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  395.163869] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  395.167533] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  395.421478] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  395.424568] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  395.582362] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  395.584880] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  395.614340] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  395.616209] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  395.738789] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  395.740938] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  396.054779] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  396.056617] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  396.099803] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  396.101489] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  396.257277] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  396.260433] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  396.287895] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  396.289760] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  396.423133] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  396.424993] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  396.580095] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  396.581969] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  396.633584] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  396.635349] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  396.746254] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  396.748918] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  396.843862] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  396.846467] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  397.087090] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  397.089823] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  397.274571] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  397.277313] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  397.486932] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  397.489648] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  397.643493] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  397.646098] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  397.708741] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  397.710970] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  397.820602] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  397.822538] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  398.388380] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  398.391153] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  398.832698] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  398.834722] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  398.858754] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  398.860867] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  399.351937] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  399.354461] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  399.621259] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  399.622508] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  399.761319] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  399.762579] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  400.481230] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  400.482937] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  400.678008] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  400.679479] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  401.096705] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  401.098063] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  401.147436] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  401.148772] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  401.431607] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  401.432938] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  401.873318] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  401.874585] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  420.420244] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  420.572601] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  423.816497] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  423.924266] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  424.227997] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  424.562258] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  424.621850] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  425.128205] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  425.189038] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  425.276745] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  425.277973] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  425.472141] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  425.473494] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  425.519758] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  425.521106] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  425.617695] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  425.618736] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  425.716447] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  425.717804] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  425.762187] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  425.763412] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  425.975208] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  425.976576] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  426.111589] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  426.113018] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  426.841210] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  426.842327] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  426.935158] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  426.936239] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  427.055988] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  427.057041] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  427.127589] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  427.128616] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  427.128785] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  427.129047] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  427.698029] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  427.803474] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  427.804490] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  427.954047] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  428.206636] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  428.207952] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  428.207973] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  428.385296] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  428.386520] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  428.756984] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  428.758156] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  428.881924] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  428.881956] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  428.882028] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  429.134868] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  429.135964] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  429.780998] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  429.781831] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  430.159259] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  430.160092] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  430.206201] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  430.632433] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  430.633818] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  430.737848] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  431.181769] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  431.183164] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  431.422523] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  431.423292] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  431.538695] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  431.540577] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  431.798622] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  431.799386] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  431.890269] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  431.891069] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  431.981482] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  431.982230] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  432.269401] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  432.270215] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  432.480204] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  432.480976] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  432.618709] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  432.620123] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  432.679501] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  432.680327] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  432.818026] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  432.959406] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  432.960855] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  433.133126] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  433.134543] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  433.323150] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  433.324327] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  433.475888] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  433.476741] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  433.558050] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  433.559466] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  433.769499] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  433.770906] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  433.834069] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  433.835422] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  433.838670] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  433.839480] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  433.931549] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  433.932575] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  434.071684] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  434.073039] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  434.097803] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  434.177007] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  434.289295] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  434.397821] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  434.523857] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  434.609871] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  434.762219] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  434.863602] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  435.013245] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  435.037470] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  435.106799] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  435.238647] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  435.355643] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  435.399859] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  435.424101] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  435.518434] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  435.732243] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  435.810790] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  435.840460] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  435.847958] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  435.922983] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  435.923743] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  435.981223] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  436.066397] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  436.183646] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  436.274289] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  436.460082] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  436.461124] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  436.514556] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  436.677693] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  436.678503] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  436.684375] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  436.685118] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  436.819468] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  436.990164] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  436.991393] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  437.049379] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  437.142723] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  437.206238] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  437.229666] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  437.230405] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  437.280044] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  437.415198] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  438.846196] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  440.093530] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  440.193200] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  442.386623] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  442.387599] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  442.387855] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  442.459717] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  444.208302] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  444.209712] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  445.305733] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  445.307222] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  447.366758] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  447.472521] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  447.473561] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  447.473579] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  447.658260] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  447.659470] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  449.716549] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  449.717571] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  450.002137] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:33561200
+[  450.003201] AAAAA-TCP_FORW: name:enp0s3: saddr:33561200: daddr:100932208
+[  450.173659] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  450.174408] AAAAA-TCP_FORW: name:enp0s3: saddr:16783984: daddr:100932208
+[  451.778961] AAAAA-TCP_FORW: name:enp0s8: saddr:100932208: daddr:16783984
+[  533.204810] rfkill: input handler enabled
+[  542.289758] rfkill: input handler disabled
+[  699.972966] device enp0s3 left promiscuous mode
+[  699.974281] device enp0s8 left promiscuous mode
