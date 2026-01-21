@@ -1,0 +1,1557 @@
+[    0.000000] Linux version 5.4.243-mptcp (root@ztg) (gcc version 12.2.0 (Debian 12.2.0-14+deb12u1)) #53 SMP Wed Dec 24 23:28:15 CST 2025
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-5.4.243-mptcp root=UUID=98415a12-53b7-4144-8265-0f7ece09e445 ro quiet splash
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Hygon HygonGenuine
+[    0.000000]   Centaur CentaurHauls
+[    0.000000]   zhaoxin   Shanghai  
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.000000] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.000000] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.000000] x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007ffeffff] usable
+[    0.000000] BIOS-e820: [mem 0x000000007fff0000-0x000000007fffffff] ACPI data
+[    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.5 present.
+[    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+[    0.000000] Hypervisor detected: KVM
+[    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+[    0.000000] kvm-clock: cpu 0, msr 1ee01001, primary cpu clock
+[    0.000000] kvm-clock: using sched offset of 4432303823 cycles
+[    0.000003] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    0.000005] tsc: Detected 2100.000 MHz processor
+[    0.001880] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.001882] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.001886] last_pfn = 0x7fff0 max_arch_pfn = 0x400000000
+[    0.001953] MTRR default type: uncachable
+[    0.001954] MTRR fixed ranges enabled:
+[    0.001955]   00000-9FFFF write-back
+[    0.001956]   A0000-BFFFF uncachable
+[    0.001957]   C0000-FFFFF write-protect
+[    0.001957] MTRR variable ranges enabled:
+[    0.001959]   0 base 000000000000 mask 3FFF80000000 write-back
+[    0.001960]   1 disabled
+[    0.001960]   2 disabled
+[    0.001961]   3 disabled
+[    0.001961]   4 disabled
+[    0.001962]   5 disabled
+[    0.001962]   6 disabled
+[    0.001962]   7 disabled
+[    0.001963]   8 disabled
+[    0.001963]   9 disabled
+[    0.001964]   10 disabled
+[    0.001964]   11 disabled
+[    0.001965]   12 disabled
+[    0.001965]   13 disabled
+[    0.001965]   14 disabled
+[    0.001966]   15 disabled
+[    0.001983] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.002115] found SMP MP-table at [mem 0x0009fff0-0x0009ffff]
+[    0.093061] check: Scanning 1 areas for low memory corruption
+[    0.093309] RAMDISK: [mem 0x32271000-0x3512ffff]
+[    0.093317] ACPI: Early table checksum verification disabled
+[    0.093322] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+[    0.093326] ACPI: XSDT 0x000000007FFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+[    0.093332] ACPI: FACP 0x000000007FFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+[    0.093338] ACPI: DSDT 0x000000007FFF02E0 002353 (v02 VBOX   VBOXBIOS 00000002 VBOX 00029BF3)
+[    0.093342] ACPI: FACS 0x000000007FFF0200 000040
+[    0.093346] ACPI: FACS 0x000000007FFF0200 000040
+[    0.093349] ACPI: APIC 0x000000007FFF0240 000054 (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+[    0.093352] ACPI: SSDT 0x000000007FFF02A0 000038 (v01 VBOX   VBOXCPUT 00000002 VBOX 00029BF3)
+[    0.093356] ACPI: Reserving FACP table memory at [mem 0x7fff00f0-0x7fff01e3]
+[    0.093357] ACPI: Reserving DSDT table memory at [mem 0x7fff02e0-0x7fff2632]
+[    0.093357] ACPI: Reserving FACS table memory at [mem 0x7fff0200-0x7fff023f]
+[    0.093358] ACPI: Reserving FACS table memory at [mem 0x7fff0200-0x7fff023f]
+[    0.093359] ACPI: Reserving APIC table memory at [mem 0x7fff0240-0x7fff0293]
+[    0.093359] ACPI: Reserving SSDT table memory at [mem 0x7fff02a0-0x7fff02d7]
+[    0.093372] ACPI: Local APIC address 0xfee00000
+[    0.093557] No NUMA configuration found
+[    0.093558] Faking a node at [mem 0x0000000000000000-0x000000007ffeffff]
+[    0.093568] NODE_DATA(0) allocated [mem 0x7ffc5000-0x7ffeffff]
+[    0.093829] Zone ranges:
+[    0.093830]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.093831]   DMA32    [mem 0x0000000001000000-0x000000007ffeffff]
+[    0.093832]   Normal   empty
+[    0.093832]   Device   empty
+[    0.093833] Movable zone start for each node
+[    0.093835] Early memory node ranges
+[    0.093836]   node   0: [mem 0x0000000000001000-0x000000000009efff]
+[    0.093837]   node   0: [mem 0x0000000000100000-0x000000007ffeffff]
+[    0.093840] Zeroed struct page in unavailable ranges: 114 pages
+[    0.093841] Initmem setup node 0 [mem 0x0000000000001000-0x000000007ffeffff]
+[    0.093842] On node 0 totalpages: 524174
+[    0.093843]   DMA zone: 64 pages used for memmap
+[    0.093844]   DMA zone: 21 pages reserved
+[    0.093845]   DMA zone: 3998 pages, LIFO batch:0
+[    0.093916]   DMA32 zone: 8128 pages used for memmap
+[    0.093917]   DMA32 zone: 520176 pages, LIFO batch:63
+[    0.102806] ACPI: PM-Timer IO Port: 0x4008
+[    0.102809] ACPI: Local APIC address 0xfee00000
+[    0.102877] IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+[    0.102881] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.102882] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 low level)
+[    0.102884] ACPI: IRQ0 used by override.
+[    0.102885] ACPI: IRQ9 used by override.
+[    0.102888] Using ACPI (MADT) for SMP configuration information
+[    0.102894] smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+[    0.102914] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.102916] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+[    0.102916] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+[    0.102917] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+[    0.102918] [mem 0x80000000-0xfebfffff] available for PCI devices
+[    0.102919] Booting paravirtualized kernel on KVM
+[    0.102921] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+[    0.102925] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:1 nr_cpu_ids:1 nr_node_ids:1
+[    0.103931] percpu: Embedded 60 pages/cpu s208896 r8192 d28672 u2097152
+[    0.103935] pcpu-alloc: s208896 r8192 d28672 u2097152 alloc=1*2097152
+[    0.103936] pcpu-alloc: [0] 0 
+[    0.103962] Built 1 zonelists, mobility grouping on.  Total pages: 515961
+[    0.103962] Policy zone: DMA32
+[    0.103963] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5.4.243-mptcp root=UUID=98415a12-53b7-4144-8265-0f7ece09e445 ro quiet splash
+[    0.104788] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.104934] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.104981] mem auto-init: stack:off, heap alloc:on, heap free:off
+[    0.104984] Calgary: detecting Calgary via BIOS EBDA area
+[    0.104984] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+[    0.109055] Memory: 1967332K/2096696K available (14339K kernel code, 2398K rwdata, 4712K rodata, 2728K init, 17260K bss, 129364K reserved, 0K cma-reserved)
+[    0.109962] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.109978] ftrace: allocating 43186 entries in 169 pages
+[    0.127987] rcu: Hierarchical RCU implementation.
+[    0.127988] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=1.
+[    0.127989] 	Tasks RCU enabled.
+[    0.127990] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.127991] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+[    0.130933] NR_IRQS: 524544, nr_irqs: 256, preallocated irqs: 16
+[    0.131129] random: crng init done
+[    0.140384] Console: colour VGA+ 80x25
+[    0.140387] printk: console [tty0] enabled
+[    0.140406] ACPI: Core revision 20190816
+[    0.140497] APIC: Switch to symmetric I/O mode setup
+[    0.140740] x2apic enabled
+[    0.140977] Switched APIC routing to physical x2apic.
+[    0.142092] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    0.142116] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x1e4530a99b6, max_idle_ns: 440795257976 ns
+[    0.142120] Calibrating delay loop (skipped) preset value.. 4200.00 BogoMIPS (lpj=8400000)
+[    0.142122] pid_max: default: 32768 minimum: 301
+[    0.142149] LSM: Security Framework initializing
+[    0.142157] Yama: becoming mindful.
+[    0.142181] AppArmor: AppArmor initialized
+[    0.142213] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.142218] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.142228] *** VALIDATE tmpfs ***
+[    0.142358] *** VALIDATE proc ***
+[    0.142398] *** VALIDATE cgroup1 ***
+[    0.142400] *** VALIDATE cgroup2 ***
+[    0.142538] process: using mwait in idle threads
+[    0.142542] Last level iTLB entries: 4KB 64, 2MB 8, 4MB 8
+[    0.142543] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+[    0.142562] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.142567] Spectre V2 : Mitigation: Retpolines
+[    0.142568] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.142569] Spectre V2 : Spectre v2 / SpectreRSB : Filling RSB on VMEXIT
+[    0.142569] RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+[    0.142925] RETBleed: Vulnerable
+[    0.142926] Speculative Store Bypass: Vulnerable
+[    0.142930] TAA: Mitigation: TSX disabled
+[    0.142931] MMIO Stale Data: Mitigation: Clear CPU buffers
+[    0.147106] Freeing SMP alternatives memory: 40K
+[    0.259459] smpboot: CPU0: Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz (family: 0x6, model: 0x55, stepping: 0x7)
+[    0.259550] Performance Events: unsupported p6 CPU model 85 no PMU driver, software events only.
+[    0.259582] rcu: Hierarchical SRCU implementation.
+[    0.260040] NMI watchdog: Perf NMI watchdog permanently disabled
+[    0.260072] smp: Bringing up secondary CPUs ...
+[    0.260073] smp: Brought up 1 node, 1 CPU
+[    0.260074] smpboot: Max logical packages: 1
+[    0.260075] smpboot: Total of 1 processors activated (4200.00 BogoMIPS)
+[    0.260998] devtmpfs: initialized
+[    0.261038] x86/mm: Memory block size: 128MB
+[    0.261349] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.261352] futex hash table entries: 256 (order: 2, 16384 bytes, linear)
+[    0.261388] pinctrl core: initialized pinctrl subsystem
+[    0.261481] PM: RTC time: 22:00:15, date: 2026-01-13
+[    0.261578] NET: Registered protocol family 16
+[    0.261648] audit: initializing netlink subsys (disabled)
+[    0.261766] EISA bus registered
+[    0.261768] cpuidle: using governor ladder
+[    0.261769] cpuidle: using governor menu
+[    0.261803] ACPI: bus type PCI registered
+[    0.261804] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.261900] PCI: Using configuration type 1 for base access
+[    0.262149] audit: type=2000 audit(1768312821.973:1): state=initialized audit_enabled=0 res=1
+[    0.262215] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.262960] ACPI: Added _OSI(Module Device)
+[    0.262960] ACPI: Added _OSI(Processor Device)
+[    0.262961] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.262962] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.262963] ACPI: Added _OSI(Linux-Dell-Video)
+[    0.262964] ACPI: Added _OSI(Linux-Lenovo-NV-HDMI-Audio)
+[    0.262964] ACPI: Added _OSI(Linux-HPI-Hybrid-Graphics)
+[    0.264906] ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    0.266561] ACPI: Interpreter enabled
+[    0.266570] ACPI: (supports S0 S5)
+[    0.266571] ACPI: Using IOAPIC for interrupt routing
+[    0.266779] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.266885] ACPI: Enabled 2 GPEs in block 00 to 07
+[    0.271739] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.271744] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI HPX-Type3]
+[    0.272191] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    0.272199] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.272569] PCI host bridge to bus 0000:00
+[    0.272571] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.272572] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.272573] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.272574] pci_bus 0000:00: root bus resource [mem 0x80000000-0xfdffffff window]
+[    0.272575] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.272620] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+[    0.273558] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+[    0.274297] pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+[    0.274680] pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+[    0.274838] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.274839] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.274840] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.274841] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.275378] pci 0000:00:02.0: [15ad:0405] type 00 class 0x030000
+[    0.278194] pci 0000:00:02.0: reg 0x10: [io  0xd010-0xd01f]
+[    0.281019] pci 0000:00:02.0: reg 0x14: [mem 0xe0000000-0xe7ffffff pref]
+[    0.282164] pci 0000:00:02.0: reg 0x18: [mem 0xf0000000-0xf01fffff]
+[    0.294727] pci 0000:00:03.0: [1022:2000] type 00 class 0x020000
+[    0.295396] pci 0000:00:03.0: reg 0x10: [io  0xd020-0xd03f]
+[    0.296013] pci 0000:00:03.0: reg 0x14: [mem 0xf0200000-0xf0200fff]
+[    0.299487] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+[    0.300165] pci 0000:00:04.0: reg 0x10: [io  0xd040-0xd05f]
+[    0.300770] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+[    0.301377] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+[    0.304608] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+[    0.305168] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+[    0.305181] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+[    0.305765] pci 0000:00:08.0: [1022:2000] type 00 class 0x020000
+[    0.306235] pci 0000:00:08.0: reg 0x10: [io  0xd060-0xd07f]
+[    0.306838] pci 0000:00:08.0: reg 0x14: [mem 0xf0804000-0xf0804fff]
+[    0.310928] pci 0000:00:09.0: [8086:100e] type 00 class 0x020000
+[    0.311631] pci 0000:00:09.0: reg 0x10: [mem 0xf0820000-0xf083ffff]
+[    0.312783] pci 0000:00:09.0: reg 0x18: [io  0xd080-0xd087]
+[    0.323050] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+[    0.323346] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+[    0.323449] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+[    0.323556] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+[    0.323777] iommu: Default domain type: Translated 
+[    0.323830] pci 0000:00:02.0: vgaarb: setting as boot VGA device
+[    0.323832] pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+[    0.323834] pci 0000:00:02.0: vgaarb: bridge control possible
+[    0.323834] vgaarb: loaded
+[    0.324022] SCSI subsystem initialized
+[    0.324048] libata version 3.00 loaded.
+[    0.324069] ACPI: bus type USB registered
+[    0.324083] usbcore: registered new interface driver usbfs
+[    0.324089] usbcore: registered new interface driver hub
+[    0.324094] usbcore: registered new device driver usb
+[    0.324118] pps_core: LinuxPPS API ver. 1 registered
+[    0.324119] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.324121] PTP clock support registered
+[    0.324156] EDAC MC: Ver: 3.0.0
+[    0.324435] PCI: Using ACPI for IRQ routing
+[    0.324436] PCI: pci_cache_line_size set to 64 bytes
+[    0.324606] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+[    0.324610] e820: reserve RAM buffer [mem 0x7fff0000-0x7fffffff]
+[    0.326132] NetLabel: Initializing
+[    0.326133] NetLabel:  domain hash size = 128
+[    0.326133] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.326152] NetLabel:  unlabeled traffic allowed by default
+[    0.327042] clocksource: Switched to clocksource kvm-clock
+[    0.340211] *** VALIDATE bpf ***
+[    0.340268] VFS: Disk quotas dquot_6.6.0
+[    0.340280] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.340299] *** VALIDATE ramfs ***
+[    0.340302] *** VALIDATE hugetlbfs ***
+[    0.340380] AppArmor: AppArmor Filesystem Enabled
+[    0.340402] pnp: PnP ACPI init
+[    0.340462] pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+[    0.340525] pnp 00:01: Plug and Play ACPI device, IDs PNP0f03 (active)
+[    0.341272] pnp: PnP ACPI: found 2 devices
+[    0.342212] thermal_sys: Registered thermal governor 'fair_share'
+[    0.342213] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.342213] thermal_sys: Registered thermal governor 'step_wise'
+[    0.342214] thermal_sys: Registered thermal governor 'user_space'
+[    0.342214] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.346723] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.346761] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.346763] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.346764] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.346765] pci_bus 0000:00: resource 7 [mem 0x80000000-0xfdffffff window]
+[    0.346819] NET: Registered protocol family 2
+[    0.346893] IP idents hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.347051] MPTCP tokens hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.347051] MPTCP request tokens hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.347051] default registered
+[    0.347051] default registered
+[    0.347051] MPTCP: Stable release v0.96
+[    0.347051] tcp_listen_portaddr_hash hash table entries: 1024 (order: 2, 16384 bytes, linear)
+[    0.347051] TCP established hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.347051] TCP bind hash table entries: 16384 (order: 6, 262144 bytes, linear)
+[    0.347051] TCP: Hash tables configured (established 16384 bind 16384)
+[    0.348199] UDP hash table entries: 1024 (order: 3, 32768 bytes, linear)
+[    0.348210] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes, linear)
+[    0.348244] NET: Registered protocol family 1
+[    0.348252] NET: Registered protocol family 44
+[    0.348272] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.348284] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    0.348342] pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+[    0.348407] PCI: CLS 0 bytes, default 64
+[    0.348448] Trying to unpack rootfs image as initramfs...
+[    0.516052] Freeing initrd memory: 47868K
+[    0.516052] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x1e4530a99b6, max_idle_ns: 440795257976 ns
+[    0.516052] clocksource: Switched to clocksource tsc
+[    0.516052] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[    0.516052] check: Scanning for low memory corruption every 60 seconds
+[    0.516052] Initialise system trusted keyrings
+[    0.516052] Key type blacklist registered
+[    0.516052] workingset: timestamp_bits=36 max_order=19 bucket_order=0
+[    0.516052] zbud: loaded
+[    0.516052] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.516052] fuse: init (API version 7.31)
+[    0.516052] *** VALIDATE fuse ***
+[    0.516052] *** VALIDATE fuse ***
+[    0.516052] Platform Keyring initialized
+[    0.528244] Key type asymmetric registered
+[    0.528245] Asymmetric key parser 'x509' registered
+[    0.528254] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+[    0.528293] io scheduler mq-deadline registered
+[    0.528411] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+[    0.528610] ACPI: AC Adapter [AC] (on-line)
+[    0.528653] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    0.528681] ACPI: Power Button [PWRF]
+[    0.528757] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    0.528771] ACPI: Sleep Button [SLPF]
+[    0.528992] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    0.530123] Linux agpgart interface v0.103
+[    0.619113] loop: module loaded
+[    0.619301] ata_piix 0000:00:01.1: version 2.13
+[    0.619684] scsi host0: ata_piix
+[    0.619766] scsi host1: ata_piix
+[    0.619791] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+[    0.619792] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+[    0.619865] tun: Universal TUN/TAP device driver, 1.6
+[    0.620164] PPP generic driver version 2.4.2
+[    0.620203] VFIO - User Level meta-driver version: 0.3
+[    0.620436] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.620440] ehci-pci: EHCI PCI platform driver
+[    0.620453] ehci-platform: EHCI generic platform driver
+[    0.620458] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    0.620460] ohci-pci: OHCI PCI platform driver
+[    0.620467] ohci-platform: OHCI generic platform driver
+[    0.620471] uhci_hcd: USB Universal Host Controller Interface driver
+[    0.620532] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[    0.620963] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    0.620966] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    0.621048] mousedev: PS/2 mouse device common for all mice
+[    0.621292] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[    0.621685] rtc_cmos rtc_cmos: registered as rtc0
+[    0.621697] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+[    0.621702] i2c /dev entries driver
+[    0.621740] device-mapper: uevent: version 1.0.3
+[    0.621780] device-mapper: ioctl: 4.41.0-ioctl (2019-09-16) initialised: dm-devel@redhat.com
+[    0.621796] platform eisa.0: Probing EISA bus 0
+[    0.621797] platform eisa.0: EISA: Cannot allocate resource for mainboard
+[    0.621798] platform eisa.0: Cannot allocate resource for EISA slot 1
+[    0.621799] platform eisa.0: Cannot allocate resource for EISA slot 2
+[    0.621800] platform eisa.0: Cannot allocate resource for EISA slot 3
+[    0.621801] platform eisa.0: Cannot allocate resource for EISA slot 4
+[    0.621802] platform eisa.0: Cannot allocate resource for EISA slot 5
+[    0.621803] platform eisa.0: Cannot allocate resource for EISA slot 6
+[    0.621804] platform eisa.0: Cannot allocate resource for EISA slot 7
+[    0.621805] platform eisa.0: Cannot allocate resource for EISA slot 8
+[    0.621806] platform eisa.0: EISA: Detected 0 cards
+[    0.621808] intel_pstate: CPU model not supported
+[    0.621816] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.621864] drop_monitor: Initializing network drop monitor service
+[    0.622020] NET: Registered protocol family 10
+[    0.627026] Segment Routing with IPv6
+[    0.627055] fullmesh registered
+[    0.627056] ndiffports registered
+[    0.627057] binder registered
+[    0.627058] roundrobin registered
+[    0.627059] redundant registered
+[    0.627060] blest registered
+[    0.627060] ecf registered
+[    0.627062] NET: Registered protocol family 17
+[    0.627090] Key type dns_resolver registered
+[    0.627161] RAS: Correctable Errors collector initialized.
+[    0.627161] IPI shorthand broadcast: enabled
+[    0.627161] sched_clock: Marking stable (612163277, 10998641)->(623525456, -363538)
+[    0.627255] registered taskstats version 1
+[    0.627262] Loading compiled-in X.509 certificates
+[    0.627848] Loaded X.509 cert 'Build time autogenerated kernel key: 6909f3744cebb3d0de528d5887b96a727de79b1e'
+[    0.627864] zswap: loaded using pool lzo/zbud
+[    0.627912] Key type ._fscrypt registered
+[    0.627913] Key type .fscrypt registered
+[    0.632304] Key type big_key registered
+[    0.634476] Key type encrypted registered
+[    0.634479] AppArmor: AppArmor sha1 policy hashing enabled
+[    0.634485] ima: No TPM chip found, activating TPM-bypass!
+[    0.634488] ima: Allocated hash algorithm: sha1
+[    0.634493] ima: No architecture policies found
+[    0.634502] evm: Initialising EVM extended attributes:
+[    0.634502] evm: security.selinux
+[    0.634503] evm: security.SMACK64
+[    0.634503] evm: security.SMACK64EXEC
+[    0.634504] evm: security.SMACK64TRANSMUTE
+[    0.634504] evm: security.SMACK64MMAP
+[    0.634505] evm: security.apparmor
+[    0.634505] evm: security.ima
+[    0.634506] evm: security.capability
+[    0.634506] evm: HMAC attrs: 0x1
+[    0.634791] PM:   Magic number: 10:242:47
+[    0.634904] rtc_cmos rtc_cmos: setting system clock to 2026-01-13T22:00:16 UTC (1768341616)
+[    0.792219] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+[    0.792223] ata1.00: 209715200 sectors, multi 128: LBA 
+[    0.792872] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+[    0.793134] sd 0:0:0:0: [sda] 209715200 512-byte logical blocks: (107 GB/100 GiB)
+[    0.793146] sd 0:0:0:0: [sda] Write Protect is off
+[    0.793149] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+[    0.793169] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    0.793308] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    0.794594]  sda: sda1 sda2
+[    0.803359] sd 0:0:0:0: [sda] Attached SCSI disk
+[    0.808593] Freeing unused decrypted memory: 2040K
+[    0.809940] Freeing unused kernel image memory: 2728K
+[    0.809944] Write protecting the kernel read-only data: 22528k
+[    0.811453] Freeing unused kernel image memory: 2036K
+[    0.812238] Freeing unused kernel image memory: 1432K
+[    0.848033] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    0.848036] Run /init as init process
+[    0.954531] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+[    0.954599] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input4
+[    0.968428] pcnet32: pcnet32.c:v1.35 21.Apr.2008 tsbogend@alpha.franken.de
+[    0.969638] pcnet32: PCnet/FAST III 79C973 at 0xd020, 08:00:27:90:08:b5 assigned IRQ 19
+[    0.969682] pcnet32: Found PHY 0022:561b at address 0
+[    0.969982] pcnet32: eth0: registered as PCnet/FAST III 79C973
+[    0.971830] piix4_smbus 0000:00:07.0: SMBus Host Controller at 0x4100, revision 0
+[    0.974898] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    0.974899] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    0.989335] pcnet32: PCnet/FAST III 79C973 at 0xd060, 08:00:27:87:51:a5 assigned IRQ 16
+[    0.989378] pcnet32: Found PHY 0022:561b at address 0
+[    0.989670] pcnet32: eth1: registered as PCnet/FAST III 79C973
+[    0.989690] pcnet32: 2 cards_found
+[    1.041270] pcnet32 0000:00:03.0 enp0s3: renamed from eth0
+[    1.047319] pcnet32 0000:00:08.0 enp0s8: renamed from eth1
+[    1.191766] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+[    1.379263] e1000 0000:00:09.0 eth0: (PCI:33MHz:32-bit) 08:00:27:0c:3d:c6
+[    1.379266] e1000 0000:00:09.0 eth0: Intel(R) PRO/1000 Network Connection
+[    1.380249] e1000 0000:00:09.0 enp0s9: renamed from eth0
+[    1.523483] EXT4-fs (sda2): mounted filesystem with ordered data mode. Opts: (null)
+[    1.612772] systemd[1]: Inserted module 'autofs4'
+[    1.625026] systemd[1]: systemd 245.4-4ubuntu3 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+[    1.625054] systemd[1]: Detected virtualization oracle.
+[    1.625057] systemd[1]: Detected architecture x86-64.
+[    1.626325] systemd[1]: Set hostname to <ztg>.
+[    1.748476] systemd[1]: /lib/systemd/system/dbus.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/dbus/system_bus_socket → /run/dbus/system_bus_socket; please update the unit file accordingly.
+[    1.800692] systemd[1]: Created slice system-modprobe.slice.
+[    1.800870] systemd[1]: Created slice User and Session Slice.
+[    1.800911] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[    1.801061] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[    1.801095] systemd[1]: Reached target User and Group Name Lookups.
+[    1.801103] systemd[1]: Reached target Remote File Systems.
+[    1.801110] systemd[1]: Reached target Slices.
+[    1.801659] systemd[1]: Listening on Syslog Socket.
+[    1.801725] systemd[1]: Listening on fsck to fsckd communication Socket.
+[    1.801761] systemd[1]: Listening on initctl Compatibility Named Pipe.
+[    1.801891] systemd[1]: Listening on Journal Audit Socket.
+[    1.801942] systemd[1]: Listening on Journal Socket (/dev/log).
+[    1.802009] systemd[1]: Listening on Journal Socket.
+[    1.802071] systemd[1]: Listening on udev Control Socket.
+[    1.802108] systemd[1]: Listening on udev Kernel Socket.
+[    1.802788] systemd[1]: Mounting Huge Pages File System...
+[    1.803744] systemd[1]: Mounting POSIX Message Queue File System...
+[    1.804575] systemd[1]: Mounting Kernel Debug File System...
+[    1.805374] systemd[1]: Mounting Kernel Trace File System...
+[    1.807252] systemd[1]: Starting Journal Service...
+[    1.829631] systemd[1]: Starting Set the console keyboard layout...
+[    1.835698] systemd[1]: Starting Create list of static device nodes for the current kernel...
+[    1.836505] systemd[1]: Starting Load Kernel Module drm...
+[    1.840253] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    1.840285] systemd[1]: Condition check resulted in File System Check on Root Device being skipped.
+[    1.842333] systemd[1]: Starting Load Kernel Modules...
+[    1.843956] systemd[1]: Starting Remount Root and Kernel File Systems...
+[    1.855585] systemd[1]: Starting udev Coldplug all Devices...
+[    1.891144] systemd[1]: Starting Uncomplicated firewall...
+[    1.892264] systemd[1]: Mounted Huge Pages File System.
+[    1.892347] systemd[1]: Mounted POSIX Message Queue File System.
+[    1.892415] systemd[1]: Mounted Kernel Debug File System.
+[    1.892480] systemd[1]: Mounted Kernel Trace File System.
+[    1.893882] EXT4-fs (sda2): re-mounted. Opts: errors=remount-ro
+[    1.899462] systemd[1]: Finished Create list of static device nodes for the current kernel.
+[    1.903576] systemd[1]: Finished Remount Root and Kernel File Systems.
+[    1.907283] systemd[1]: Finished Uncomplicated firewall.
+[    1.907975] systemd[1]: Condition check resulted in Rebuild Hardware Database being skipped.
+[    1.908004] systemd[1]: Condition check resulted in Platform Persistent Storage Archival being skipped.
+[    1.908644] systemd[1]: Starting Load/Save Random Seed...
+[    1.915936] systemd[1]: Starting Create System Users...
+[    1.916238] systemd[1]: modprobe@drm.service: Succeeded.
+[    1.926413] lp: driver loaded but no devices found
+[    1.927921] systemd[1]: Finished Load Kernel Module drm.
+[    1.948425] systemd[1]: Finished Load/Save Random Seed.
+[    1.950014] ppdev: user-space parallel port driver
+[    1.973933] systemd[1]: Finished Create System Users.
+[    1.974608] systemd[1]: Starting Create Static Device Nodes in /dev...
+[    2.020330] systemd[1]: Finished Create Static Device Nodes in /dev.
+[    2.021064] systemd[1]: Starting udev Kernel Device Manager...
+[    2.030883] systemd[1]: Finished udev Coldplug all Devices.
+[    2.032535] [drm] DMA map mode: Caching DMA mappings.
+[    2.032627] [drm] Capabilities:
+[    2.032627] [drm]   Rect copy.
+[    2.032628] [drm]   Cursor.
+[    2.032628] [drm]   Cursor bypass.
+[    2.032628] [drm]   Cursor bypass 2.
+[    2.032629] [drm]   Alpha cursor.
+[    2.032629] [drm]   Extended Fifo.
+[    2.032629] [drm]   Pitchlock.
+[    2.032630] [drm]   Irq mask.
+[    2.032630] [drm]   GMR.
+[    2.032630] [drm]   Traces.
+[    2.032631] [drm]   GMR2.
+[    2.032631] [drm]   Screen Object 2.
+[    2.032631] [drm]   Command Buffers.
+[    2.032632] [drm]   Command Buffers 2.
+[    2.032632] [drm]   Guest Backed Resources.
+[    2.032633] [drm] Max GMR ids is 8192
+[    2.032633] [drm] Max number of GMR pages is 1048576
+[    2.032634] [drm] Max dedicated hypervisor surface memory is 393216 kiB
+[    2.032634] [drm] Maximum display memory size is 131072 kiB
+[    2.032635] [drm] VRAM at 0xe0000000 size is 131072 kiB
+[    2.032636] [drm] MMIO at 0xf0000000 size is 2048 kiB
+[    2.035706] [TTM] Zone  kernel: Available graphics memory: 1011738 KiB
+[    2.035707] [TTM] Initializing pool allocator
+[    2.035710] [TTM] Initializing DMA pool allocator
+[    2.035738] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    2.035738] [drm] No driver support for vblank timestamp query.
+[    2.035954] [drm] Screen Target Display device initialized
+[    2.036139] [drm] width 720
+[    2.036148] [drm] height 400
+[    2.036151] [drm] bpp 32
+[    2.036651] [drm] Fifo max 0x00200000 min 0x00001000 cap 0x00000355
+[    2.037698] [drm] Using command buffers with DMA pool.
+[    2.037701] [drm] DX: no.
+[    2.037701] [drm] Atomic: yes.
+[    2.037702] [drm] SM4_1: no.
+[    2.037720] [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+[    2.038618] [drm:vmw_host_log [vmwgfx]] *ERROR* Failed to send host log message.
+[    2.069703] fbcon: svgadrmfb (fb0) is primary device
+[    2.071823] Console: switching to colour frame buffer device 100x37
+[    2.077368] [drm] Initialized vmwgfx 2.15.0 20180704 for 0000:00:02.0 on minor 0
+[    2.078186] systemd[1]: Finished Load Kernel Modules.
+[    2.079125] systemd[1]: Mounting FUSE Control File System...
+[    2.080243] systemd[1]: Mounting Kernel Configuration File System...
+[    2.094085] systemd[1]: Starting Apply Kernel Variables...
+[    2.095032] systemd[1]: Mounted FUSE Control File System.
+[    2.105424] systemd[1]: Mounted Kernel Configuration File System.
+[    2.105492] systemd[1]: Condition check resulted in VMware vmblock fuse mount being skipped.
+[    2.129520] systemd[1]: Finished Apply Kernel Variables.
+[    2.135742] systemd[1]: Finished Set the console keyboard layout.
+[    2.135814] systemd[1]: Reached target Local File Systems (Pre).
+[    2.140128] systemd[1]: Mounting Mount unit for bare, revision 5...
+[    2.141996] systemd[1]: Mounting Mount unit for core18, revision 1705...
+[    2.163959] systemd[1]: Mounting Mount unit for gnome-3-34-1804, revision 24...
+[    2.166090] systemd[1]: Mounting Mount unit for gtk-common-themes, revision 1506...
+[    2.179889] systemd[1]: Mounting Mount unit for gtk-common-themes, revision 1535...
+[    2.183559] systemd[1]: Mounting Mount unit for snap-store, revision 433...
+[    2.192083] systemd[1]: Mounting Mount unit for snapd, revision 25935...
+[    2.218051] systemd[1]: Mounted Mount unit for bare, revision 5.
+[    2.218139] systemd[1]: Mounted Mount unit for gnome-3-34-1804, revision 24.
+[    2.223424] systemd[1]: Started udev Kernel Device Manager.
+[    2.224086] systemd[1]: Starting Show Plymouth Boot Screen...
+[    2.229788] systemd[1]: Received SIGRTMIN+20 from PID 273 (plymouthd).
+[    2.237442] systemd[1]: Mounted Mount unit for gtk-common-themes, revision 1506.
+[    2.254968] systemd[1]: Started Show Plymouth Boot Screen.
+[    2.255152] systemd[1]: Condition check resulted in Dispatch Password Requests to Console Directory Watch being skipped.
+[    2.255248] systemd[1]: Started Forward Password Requests to Plymouth Directory Watch.
+[    2.255312] systemd[1]: Reached target Local Encrypted Volumes.
+[    2.290511] systemd[1]: Mounted Mount unit for core18, revision 1705.
+[    2.290756] systemd[1]: Mounted Mount unit for gtk-common-themes, revision 1535.
+[    2.321825] systemd[1]: Mounted Mount unit for snap-store, revision 433.
+[    2.323819] systemd[1]: Mounted Mount unit for snapd, revision 25935.
+[    2.324015] systemd[1]: Reached target Local File Systems.
+[    2.324768] systemd[1]: Starting Load AppArmor profiles...
+[    2.327081] systemd[1]: Starting Set console font and keymap...
+[    2.340040] systemd[1]: Starting Tell Plymouth To Write Out Runtime Data...
+[    2.341392] systemd[1]: Condition check resulted in Store a System Token in an EFI Variable being skipped.
+[    2.341446] systemd[1]: Condition check resulted in Commit a transient machine-id on disk being skipped.
+[    2.343834] systemd[1]: Finished Set console font and keymap.
+[    2.352825] systemd[1]: Received SIGRTMIN+20 from PID 273 (plymouthd).
+[    2.353916] systemd[1]: plymouth-read-write.service: Succeeded.
+[    2.354194] systemd[1]: Finished Tell Plymouth To Write Out Runtime Data.
+[    2.370091] audit: type=1400 audit(1768341618.232:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=302 comm="apparmor_parser"
+[    2.370093] audit: type=1400 audit(1768341618.232:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=302 comm="apparmor_parser"
+[    2.379401] audit: type=1400 audit(1768341618.244:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/tcpdump" pid=303 comm="apparmor_parser"
+[    2.426639] audit: type=1400 audit(1768341618.284:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince" pid=305 comm="apparmor_parser"
+[    2.426640] audit: type=1400 audit(1768341618.284:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince//sanitized_helper" pid=305 comm="apparmor_parser"
+[    2.426643] audit: type=1400 audit(1768341618.284:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-previewer" pid=305 comm="apparmor_parser"
+[    2.426645] audit: type=1400 audit(1768341618.284:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-previewer//sanitized_helper" pid=305 comm="apparmor_parser"
+[    2.426646] audit: type=1400 audit(1768341618.284:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/evince-thumbnailer" pid=305 comm="apparmor_parser"
+[    2.440975] audit: type=1400 audit(1768341618.304:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/cups/backend/cups-pdf" pid=306 comm="apparmor_parser"
+[    2.520235] systemd[1]: Finished Load AppArmor profiles.
+[    2.521090] systemd[1]: Starting Load AppArmor profiles managed internally by snapd...
+[    2.632064] systemd[1]: Finished Load AppArmor profiles managed internally by snapd.
+[    2.772663] systemd[1]: Started Journal Service.
+[    2.779990] systemd-journald[229]: Received client request to flush runtime journal.
+[    2.782441] systemd-journald[229]: File /var/log/journal/c455b248004a419c87ce85eea238d727/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[    4.005791] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+[    4.067250] cryptd: max_cpu_qlen set to 1000
+[    4.105780] AVX2 version of gcm_enc/dec engaged.
+[    4.105781] AES CTR mode by8 optimization enabled
+[    5.879439] Adding 1998844k swap on /dev/sda1.  Priority:-2 extents:1 across:1998844k FS
+[    7.154252] kauditd_printk_skb: 30 callbacks suppressed
+[    7.154254] audit: type=1400 audit(1768341623.016:41): apparmor="DENIED" operation="capable" profile="/usr/sbin/cups-browsed" pid=509 comm="cups-browsed" capability=23  capname="sys_nice"
+[    8.281750] pcnet32 0000:00:03.0 enp0s3: link up, 100Mbps, full-duplex
+[    8.303206] pcnet32 0000:00:08.0 enp0s8: link up, 100Mbps, full-duplex
+[    8.335220] e1000: enp0s9 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+[    8.335516] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s9: link becomes ready
+[    8.853255] device enp0s3 entered promiscuous mode
+[    8.871798] device enp0s8 entered promiscuous mode
+[    8.903992] audit: type=1400 audit(1768341624.768:42): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=631 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.905581] audit: type=1400 audit(1768341624.768:43): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=631 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.905899] audit: type=1400 audit(1768341624.768:44): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=631 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.905951] audit: type=1400 audit(1768341624.768:45): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=632 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.906057] audit: type=1400 audit(1768341624.768:46): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=631 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.906861] audit: type=1400 audit(1768341624.768:47): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=632 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.907602] audit: type=1400 audit(1768341624.772:48): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=632 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.907837] audit: type=1400 audit(1768341624.772:49): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=632 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[    8.911360] audit: type=1400 audit(1768341624.776:50): apparmor="DENIED" operation="open" profile="/usr/sbin/tcpdump" name="/proc/sys/kernel/random/boot_id" pid=634 comm="tcpdump" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[   14.578190] rfkill: input handler disabled
+[  234.087879] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:0: RTT:0: ssthresh:2147483647: cwnd:10: delivered:0: lost:0: retrans:0
+[  234.087920] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:0: RTT:0: ssthresh:0: cwnd:0: delivered:0: lost:0: retrans:0
+[  234.273970] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1488208: RTT:186026: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  234.313586] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:1488208: RTT:186026: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  234.313621] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1488208: RTT:186026: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  234.313849] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1488208: RTT:186026: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  234.583161] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:0: RTT:0: ssthresh:2147483647: cwnd:10: delivered:0: lost:0: retrans:0
+[  234.583230] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:0: RTT:0: ssthresh:0: cwnd:0: delivered:0: lost:0: retrans:0
+[  234.712077] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:1488208: RTT:186026: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  234.745401] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:1700439: RTT:212554: ssthresh:2147483647: cwnd:10: delivered:2: lost:0: retrans:0
+[  234.745451] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1700439: RTT:212554: ssthresh:2147483647: cwnd:10: delivered:2: lost:0: retrans:0
+[  235.071508] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:3905976: RTT:488247: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  235.113724] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:1700439: RTT:212554: ssthresh:2147483647: cwnd:10: delivered:2: lost:0: retrans:0
+[  235.113776] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1700439: RTT:212554: ssthresh:2147483647: cwnd:10: delivered:2: lost:0: retrans:0
+[  235.113942] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1700439: RTT:212554: ssthresh:2147483647: cwnd:10: delivered:2: lost:0: retrans:0
+[  235.452511] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:1700439: RTT:212554: ssthresh:2147483647: cwnd:10: delivered:2: lost:0: retrans:0
+[  235.485786] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:0: RTT:0: ssthresh:2147483647: cwnd:10: delivered:0: lost:0: retrans:0
+[  235.485827] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:0: RTT:0: ssthresh:0: cwnd:0: delivered:0: lost:0: retrans:0
+[  235.600479] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  235.718109] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  235.718159] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  235.719529] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1826489: RTT:228311: ssthresh:2147483647: cwnd:10: delivered:3: lost:0: retrans:0
+[  235.910491] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:0: RTT:0: ssthresh:2147483647: cwnd:10: delivered:0: lost:0: retrans:0
+[  235.910541] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:0: RTT:0: ssthresh:0: cwnd:0: delivered:0: lost:0: retrans:0
+[  236.049019] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:1826489: RTT:228311: ssthresh:2147483647: cwnd:10: delivered:3: lost:0: retrans:0
+[  236.049061] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1826489: RTT:228311: ssthresh:2147483647: cwnd:10: delivered:3: lost:0: retrans:0
+[  236.228650] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  236.290477] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:1927708: RTT:240963: ssthresh:2147483647: cwnd:10: delivered:4: lost:0: retrans:0
+[  236.368060] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  236.368106] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  236.524166] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  236.524212] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  236.599591] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  236.599634] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  236.772987] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  236.773026] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  236.840956] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  236.840990] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  236.903028] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  236.903063] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.118818] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.118870] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.203585] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.203634] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.265207] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.265251] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.322015] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.322072] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.354389] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.354422] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.451969] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.452012] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.717432] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.717484] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.894393] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.894441] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.964461] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  237.964523] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  238.042502] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  238.042529] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  238.108448] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  238.108495] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  238.136453] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  238.136502] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  238.316273] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  238.316318] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  238.638499] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  238.638547] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  238.971851] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  238.971903] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.028302] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.028342] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.088874] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.088918] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.172876] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.172901] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.231980] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.232010] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.271369] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.271402] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.357658] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.357701] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.436649] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.436697] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.484115] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.484157] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.742192] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.742244] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.778215] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.778258] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.880010] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  239.880063] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.082107] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.082159] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.214197] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.214243] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.282826] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.282868] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.356814] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.356847] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.478478] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.478516] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.650709] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.650793] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.783257] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.783298] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.949240] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  240.949286] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.024488] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.024534] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.185846] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.227052] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.273483] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.355059] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.418410] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.418488] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.494789] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.494841] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.548568] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.548602] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.666610] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.666656] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.755812] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.755851] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.811390] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.811426] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.936304] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  241.936344] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.072276] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.072322] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.246124] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.246172] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.511225] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.511270] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.608461] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.608507] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.682566] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.682602] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.745628] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.745662] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.884178] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.884211] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.985036] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  242.985092] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  243.036364] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  243.036405] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  243.147798] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  243.191035] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  243.401803] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  243.483042] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  243.526917] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  243.526969] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  243.772750] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  243.772798] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  243.926844] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  243.926889] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  244.068591] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  244.068634] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  244.127564] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  244.127599] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  244.253321] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  244.253367] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  244.440591] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  244.440632] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  244.494492] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  244.494530] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  244.794304] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  244.794346] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  244.966312] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  244.966364] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  245.066604] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  245.066647] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  245.154546] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  245.154587] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  245.301158] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  245.301201] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  245.402809] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  245.402855] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  245.511442] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  245.511504] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  245.754143] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  245.754191] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  245.913226] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  245.955050] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.049500] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.115181] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.115239] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.131054] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.281620] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.281658] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.384223] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.384257] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.428219] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.428250] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.490802] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.490832] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.567123] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.567153] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.953107] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  246.953151] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.016176] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.016198] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.209253] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.209330] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.269024] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.269093] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.385809] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.385888] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.490528] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.490595] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.552967] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.553016] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.680161] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.680226] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.899168] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.899234] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.935667] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  247.935730] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  248.201127] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  248.201244] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  248.292918] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  248.292999] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  248.393863] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  248.498462] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  248.498501] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  248.660866] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  248.660914] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  248.720788] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  248.720836] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  248.896641] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  248.896712] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  249.123534] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  249.123586] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  249.201300] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  249.201346] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  249.290085] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  249.290131] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  249.388277] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  249.388319] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  249.497587] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  249.497626] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  268.729808] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  268.729853] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  268.842324] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  268.842354] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  268.952708] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  268.952732] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  269.050589] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  269.050611] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  269.140718] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  269.140740] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  269.225682] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  269.225705] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  269.343032] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  269.343056] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  269.426192] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  269.426214] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  269.610435] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  269.610459] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  269.704272] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  269.704295] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  270.055456] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  270.055481] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  270.175087] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  270.175111] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  270.285480] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  270.285503] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  270.447717] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  270.447742] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  270.572788] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  270.572812] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  270.780420] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  270.780445] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  270.907752] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  270.907775] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.048047] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.048072] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.154561] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.154585] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.280189] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.280213] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.383573] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.383597] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.460489] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.460512] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.564879] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.564902] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.677416] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.677439] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.788655] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.788679] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.934195] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  271.935423] AAAAA-TCP_SEND: name:enp0s8: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  272.090352] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  272.090379] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  272.219353] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  272.219376] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  272.491593] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  272.491616] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  272.657111] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  272.657134] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  272.874339] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  272.874363] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  273.232201] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  273.232226] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  273.411206] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  273.455032] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  273.560325] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  273.643085] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  273.724044] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  273.802036] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  273.802057] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  273.926280] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  274.127037] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  274.223134] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  274.342094] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  274.342118] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  274.459127] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  274.551040] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  274.551078] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  274.665623] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  274.734492] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  274.734514] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  274.876462] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  274.876491] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  275.044894] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  275.044917] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  275.168338] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  275.168362] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  275.330770] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  275.455430] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  275.455452] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  275.663834] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  275.837928] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  275.837958] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  275.951285] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  275.951317] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.035370] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.035396] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.096957] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.096981] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.204199] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.204226] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.304161] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.304185] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.577466] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.619036] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.721946] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.784834] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.784860] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.893616] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.940161] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  276.940184] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.033524] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.119194] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.119206] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.211464] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.260584] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.260607] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.316792] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.374651] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.418284] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.418305] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.511594] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.573533] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.573556] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.691802] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.755606] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.804739] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.804770] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.887631] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.887657] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.941412] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.941437] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  277.996249] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.070298] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.070323] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.312969] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.312994] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.467522] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.467551] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.512045] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.512071] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.596314] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.596337] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.684761] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.684782] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.768175] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.768201] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.889057] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.889082] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.952680] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  278.952703] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.047262] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.047284] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.155407] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.155437] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.203290] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.203315] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.282611] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.282637] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.348415] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.348441] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.432868] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.432894] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.521484] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.521509] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.689298] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.689323] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.766725] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.766752] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.870535] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.870560] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.968139] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  279.968163] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  303.674934] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  303.674973] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  303.935691] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  303.935727] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  304.129211] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  304.129248] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  304.434790] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  304.434819] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  304.646177] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  304.646218] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  304.801967] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  304.802011] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  305.037374] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  305.037407] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  305.447924] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  305.447973] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  305.555588] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  305.555617] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  305.745931] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  305.745957] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  305.799856] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  305.799899] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  305.848504] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  305.848528] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.067737] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.067779] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.144400] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.144432] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.281204] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.281248] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.389323] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.389348] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.508744] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.508769] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.637891] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.637921] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.764772] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.764787] AAAAA-TCP_SEND: name:enp0s8: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.851779] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.851812] AAAAA-TCP_SEND: name:enp0s8: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.958170] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.958198] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.971206] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  306.971228] AAAAA-TCP_SEND: name:enp0s8: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.018679] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.018692] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.164934] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.164963] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.233385] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.233408] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.254464] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.254488] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.333467] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.333488] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.598981] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.599011] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.709767] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.709794] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.847188] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  307.847210] AAAAA-TCP_SEND: name:enp0s8: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  308.078100] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  308.078145] AAAAA-TCP_SEND: name:enp0s8: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  309.001378] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  309.001419] AAAAA-TCP_SEND: name:enp0s8: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  309.478148] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  309.478186] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  310.820788] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  310.820830] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  311.567892] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  311.567935] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  311.984707] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  311.984741] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  312.400486] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  312.400524] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  312.819816] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  312.966962] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  312.967002] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  312.970409] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  312.970421] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.064778] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.064805] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.184750] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.184779] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.245872] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.415794] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.415821] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.519559] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.519584] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.551432] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.551454] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.942752] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.942776] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.988259] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  313.988284] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  314.112481] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  314.112507] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  314.303830] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  314.303858] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  314.603187] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  314.603218] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  314.803148] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  314.803180] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  314.967121] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  315.014941] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  315.014957] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  315.265111] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  315.561270] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  315.561308] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  315.728288] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  315.728322] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  315.857833] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  315.857862] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  318.019925] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  318.717926] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  318.717961] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  319.313311] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  319.313348] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  320.111857] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  320.111891] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  320.321689] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  320.321728] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  320.607507] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  320.896662] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  320.896706] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  320.974600] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  320.974631] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  321.263309] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  321.263339] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  321.356973] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  321.356998] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  321.445985] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  321.446008] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  321.604259] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  321.604280] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  321.867038] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  321.867074] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  321.991524] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  321.991570] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  322.093615] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  322.093639] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  322.276235] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  322.276259] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  322.279163] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  322.279173] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  322.400343] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  322.400364] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  322.678411] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  322.678433] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  322.830438] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  322.830459] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  323.157984] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  323.158006] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  323.438885] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  323.438907] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  323.754392] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  323.754408] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  323.901768] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  323.901800] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  324.463017] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  324.463033] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  324.775469] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  324.775494] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  324.907859] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  324.907885] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  325.098748] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  325.098773] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  325.317301] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  325.317327] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  327.296537] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  327.296573] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  327.429299] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  327.429331] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  327.650810] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  327.650839] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  327.813278] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  327.813303] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  327.889767] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  327.889799] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  328.064093] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  328.064129] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  328.335978] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  328.336006] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  328.544708] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  328.544732] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  334.917547] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  334.917586] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  334.982751] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  334.982791] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  335.349903] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  335.349946] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  335.441657] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  335.441684] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  335.592646] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  335.592673] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  335.690169] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  335.690195] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  335.915754] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  335.915780] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  336.075601] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  336.076674] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  336.196716] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  336.197777] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  336.359876] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  336.360933] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  336.537217] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  336.538274] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  336.623857] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  336.624913] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  336.836219] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  336.837273] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  337.142378] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  337.143444] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  337.391307] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  337.392368] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  338.956410] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  338.957547] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  339.355056] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  339.356126] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  339.524082] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  339.524107] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  339.764855] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  339.765919] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  339.865764] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  339.866825] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  340.215461] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  340.216546] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  340.312035] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  340.312067] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  340.424181] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  340.425243] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  340.590425] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  340.591475] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  340.819410] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  340.819444] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  340.860342] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  340.860368] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  340.934153] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  340.934195] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  341.147918] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  341.147958] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  341.226000] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  341.226029] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  341.265142] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  341.265173] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  341.458309] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  341.458347] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  341.668552] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  341.668591] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  341.846189] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  341.846273] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  341.984954] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  341.984994] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  342.046604] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  342.046633] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  342.132010] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  342.132036] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  342.188997] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  342.189020] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  342.245022] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  342.245044] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  342.492118] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  342.492139] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  342.786399] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  342.786431] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.062474] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.063528] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.153414] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.153443] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.283508] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.327030] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.370299] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.451030] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.705832] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.772756] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.772781] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.827987] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.898982] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.899007] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  343.970384] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.023596] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.023618] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.176990] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.268566] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.268590] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.328892] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.454510] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.454524] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.496723] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.586684] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.586705] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.683176] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.821953] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.821976] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.917333] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.970836] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  344.970858] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.074790] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.075840] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.132877] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.133942] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.214503] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.215552] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.311688] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.351272] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.352332] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.399138] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.399160] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.446124] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.535096] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.536150] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.571063] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.721044] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.736835] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.764697] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.854961] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:16783984: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.870649] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.923479] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  345.923491] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  346.083024] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  346.149999] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  346.150009] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  346.217066] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  346.388470] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  346.388494] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  346.451081] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  346.603012] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  354.892204] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  354.892242] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  355.225774] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  355.225803] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  355.464229] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  355.464256] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  355.721396] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  355.722475] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  355.866858] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  355.867907] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  356.095672] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  356.096734] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  356.217199] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  356.218255] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  356.290622] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  356.291677] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  356.440615] AAAAA-TCP_RECV: name:enp0s3: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  356.442109] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  357.513439] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  357.513469] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  357.694337] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  357.694374] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  357.840671] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  357.840703] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  358.007404] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  358.007432] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  358.684111] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  358.684145] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  359.208664] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  359.208698] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  359.378649] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  359.378678] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  359.524769] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  359.524792] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  360.301945] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  360.301969] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  360.427983] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  360.428006] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  360.513190] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  360.513213] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  360.732131] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  360.732154] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  360.999141] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  360.999164] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  361.186703] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  361.186741] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  361.363240] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  361.363264] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  361.470978] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  361.471002] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  361.599898] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  361.643029] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  361.784091] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  361.867030] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  361.888879] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  361.958302] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  361.958349] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  362.116172] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  362.195371] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  362.195474] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  362.415228] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  362.579029] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  362.664474] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  362.991060] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  363.073586] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  363.317097] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  363.317121] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  363.436311] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  363.702913] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  363.702937] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  363.805848] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  364.143085] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  364.209871] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  364.559037] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  364.599889] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  364.687542] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  364.687651] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  364.910715] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  364.984375] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  364.984422] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  365.214977] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  365.322513] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:1928189: RTT:241023: ssthresh:2147483647: cwnd:10: delivered:5: lost:0: retrans:0
+[  365.322539] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1928189: RTT:241023: ssthresh:2147483647: cwnd:10: delivered:5: lost:0: retrans:0
+[  365.322707] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  365.322813] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1928189: RTT:241023: ssthresh:2147483647: cwnd:10: delivered:5: lost:0: retrans:0
+[  365.497846] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  365.497867] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:917048: RTT:114631: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  365.497893] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  365.711124] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  365.884394] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  366.019498] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  366.031045] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1928189: RTT:241023: ssthresh:2147483647: cwnd:10: delivered:5: lost:0: retrans:1
+[  366.269376] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  366.419551] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  366.479084] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  366.508181] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:1928189: RTT:241023: ssthresh:2147483647: cwnd:10: delivered:5: lost:0: retrans:1
+[  366.508204] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1928189: RTT:241023: ssthresh:2147483647: cwnd:10: delivered:5: lost:0: retrans:1
+[  366.598027] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  366.654611] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  366.767035] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1928189: RTT:241023: ssthresh:7: cwnd:1: delivered:5: lost:1: retrans:2
+[  366.767079] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:3905976: RTT:488247: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  367.286603] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:1928189: RTT:241023: ssthresh:7: cwnd:1: delivered:5: lost:1: retrans:2
+[  367.286627] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1928189: RTT:241023: ssthresh:7: cwnd:1: delivered:5: lost:1: retrans:2
+[  367.391755] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:3905976: RTT:488247: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  367.391779] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:3905976: RTT:488247: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  367.607958] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  367.788649] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  367.904421] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  367.951031] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:3905976: RTT:488247: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:1
+[  368.041563] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  368.102729] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  368.239036] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1928189: RTT:241023: ssthresh:7: cwnd:1: delivered:5: lost:2: retrans:3
+[  368.258417] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  368.346272] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  368.392072] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  368.399048] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  368.712119] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:3905976: RTT:488247: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:1
+[  368.712145] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:3905976: RTT:488247: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:1
+[  368.969722] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:1928189: RTT:241023: ssthresh:7: cwnd:1: delivered:5: lost:2: retrans:3
+[  368.969746] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1928189: RTT:241023: ssthresh:7: cwnd:1: delivered:5: lost:2: retrans:3
+[  369.225751] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  369.340756] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  369.423030] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:3905976: RTT:488247: ssthresh:7: cwnd:1: delivered:1: lost:1: retrans:2
+[  369.565784] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  369.610091] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:3905976: RTT:488247: ssthresh:7: cwnd:1: delivered:1: lost:1: retrans:2
+[  369.610115] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:3905976: RTT:488247: ssthresh:7: cwnd:1: delivered:1: lost:1: retrans:2
+[  369.726104] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  369.809165] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  369.901788] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  369.964607] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  370.077607] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  370.149182] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  370.182118] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  370.215032] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  370.265950] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  370.314802] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  370.388603] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:1928189: RTT:241023: ssthresh:7: cwnd:1: delivered:5: lost:2: retrans:3
+[  370.388626] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1928189: RTT:241023: ssthresh:7: cwnd:1: delivered:5: lost:2: retrans:3
+[  370.495208] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:3905976: RTT:488247: ssthresh:7: cwnd:1: delivered:1: lost:1: retrans:2
+[  370.495231] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:3905976: RTT:488247: ssthresh:7: cwnd:1: delivered:1: lost:1: retrans:2
+[  370.765312] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  370.860123] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  370.975103] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  371.009261] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  371.041075] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  371.107195] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  371.209377] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  371.268763] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  371.311030] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:1928189: RTT:241023: ssthresh:7: cwnd:1: delivered:5: lost:3: retrans:4
+[  371.414412] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:0: RTT:0: ssthresh:2147483647: cwnd:10: delivered:0: lost:0: retrans:0
+[  371.414437] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:0: RTT:0: ssthresh:-1: cwnd:-1416680400: delivered:0: lost:0: retrans:4138744256
+[  371.642352] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  371.642372] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  371.858335] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:3905976: RTT:488247: ssthresh:7: cwnd:1: delivered:1: lost:1: retrans:2
+[  371.858358] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:3905976: RTT:488247: ssthresh:7: cwnd:1: delivered:1: lost:1: retrans:2
+[  371.928449] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:1928189: RTT:241023: ssthresh:7: cwnd:1: delivered:5: lost:3: retrans:4
+[  372.002319] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:7584166: RTT:948020: ssthresh:2147483647: cwnd:10: delivered:6: lost:3: retrans:4
+[  372.002343] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:7584166: RTT:948020: ssthresh:2147483647: cwnd:10: delivered:6: lost:3: retrans:4
+[  372.078485] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:2544728: RTT:318091: ssthresh:2147483647: cwnd:10: delivered:1: lost:0: retrans:0
+[  372.122707] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:7584166: RTT:948020: ssthresh:2147483647: cwnd:10: delivered:6: lost:3: retrans:4
+[  372.173853] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:3905976: RTT:488247: ssthresh:7: cwnd:1: delivered:1: lost:1: retrans:2
+[  372.298699] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:8823729: RTT:1102966: ssthresh:2147483647: cwnd:10: delivered:2: lost:1: retrans:2
+[  372.351305] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:7584166: RTT:948020: ssthresh:2147483647: cwnd:10: delivered:7: lost:3: retrans:4
+[  372.401721] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:0: RTT:0: ssthresh:2147483647: cwnd:10: delivered:0: lost:0: retrans:0
+[  372.468974] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:8823729: RTT:1102966: ssthresh:2147483647: cwnd:10: delivered:3: lost:1: retrans:2
+[  372.580129] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:7584166: RTT:948020: ssthresh:2147483647: cwnd:10: delivered:8: lost:3: retrans:4
+[  372.622157] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:0: RTT:0: ssthresh:2147483647: cwnd:10: delivered:0: lost:0: retrans:0
+[  372.651384] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:7584166: RTT:948020: ssthresh:2147483647: cwnd:10: delivered:9: lost:3: retrans:4
+[  372.651410] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:7584166: RTT:948020: ssthresh:2147483647: cwnd:10: delivered:9: lost:3: retrans:4
+[  372.651573] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:7584166: RTT:948020: ssthresh:2147483647: cwnd:10: delivered:9: lost:3: retrans:4
+[  372.809793] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:7584166: RTT:948020: ssthresh:2147483647: cwnd:10: delivered:9: lost:3: retrans:4
+[  372.809816] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:7584166: RTT:948020: ssthresh:2147483647: cwnd:10: delivered:9: lost:3: retrans:4
+[  372.918686] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:6794388: RTT:849298: ssthresh:2147483647: cwnd:10: delivered:10: lost:3: retrans:4
+[  372.965255] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:6053977: RTT:756747: ssthresh:2147483647: cwnd:10: delivered:11: lost:3: retrans:4
+[  372.965279] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:6053977: RTT:756747: ssthresh:2147483647: cwnd:10: delivered:11: lost:3: retrans:4
+[  372.965425] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:6053977: RTT:756747: ssthresh:2147483647: cwnd:10: delivered:11: lost:3: retrans:4
+[  373.061840] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:6053977: RTT:756747: ssthresh:2147483647: cwnd:10: delivered:11: lost:3: retrans:4
+[  373.061862] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:6053977: RTT:756747: ssthresh:2147483647: cwnd:10: delivered:11: lost:3: retrans:4
+[  373.151432] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:16783984: srtt_us:6053977: RTT:756747: ssthresh:2147483647: cwnd:10: delivered:11: lost:3: retrans:4
+[  373.151453] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:8823729: RTT:1102966: ssthresh:2147483647: cwnd:10: delivered:4: lost:1: retrans:2
+[  373.278043] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:8823729: RTT:1102966: ssthresh:2147483647: cwnd:10: delivered:4: lost:1: retrans:2
+[  373.278063] AAAAA-TCP_SEND: name:enp0s3: saddr:33561200: daddr:100932208: srtt_us:8823729: RTT:1102966: ssthresh:2147483647: cwnd:10: delivered:4: lost:1: retrans:2
+[  373.366891] AAAAA-TCP_SEND: name:enp0s3: saddr:16783984: daddr:100932208: srtt_us:0: RTT:0: ssthresh:-1: cwnd:-1416680400: delivered:0: lost:0: retrans:4138744256
+[  373.449176] AAAAA-TCP_RECV: name:enp0s8: saddr:100932208: daddr:33561200: srtt_us:8823729: RTT:1102966: ssthresh:2147483647: cwnd:10: delivered:4: lost:1: retrans:2
+[  456.577859] rfkill: input handler enabled
+[  464.961991] rfkill: input handler disabled
+[  613.877497] device enp0s3 left promiscuous mode
+[  613.880107] device enp0s8 left promiscuous mode
